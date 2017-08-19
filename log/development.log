@@ -39,3 +39,451 @@ Processing by StaticPagesController#top as HTML
 Completed 200 OK in 316ms (Views: 314.4ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStudents (20170819102421)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" integer, "grade" integer, "department" varchar, "attendance_number" integer, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170819102421"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-19 10:26:29.326598"], ["updated_at", "2017-08-19 10:26:29.326598"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "grade", "department", "attendance_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", 0], ["grade", 5], ["department", "CS"], ["attendance_number", 47], ["created_at", "2017-08-19 10:28:04.559241"], ["updated_at", "2017-08-19 10:28:04.559241"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStudents (20170819102421)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" integer, "grade" integer, "department" varchar, "attendance_number" integer, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170819102421"]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-19 10:39:26.361125"], ["updated_at", "2017-08-19 10:39:26.361125"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStudents (20170819102421)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" integer, "grade" integer, "department" varchar, "education_number" integer, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170819102421"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-19 10:40:28.977053"], ["updated_at", "2017-08-19 10:40:28.977053"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-08-19 10:41:11.024304"], ["updated_at", "2017-08-19 10:41:11.024304"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (8.6ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-08-19 19:58:25 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aoshi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aoshi/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb (5.8ms)
+Completed 200 OK in 28ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 19:58:32 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block):
+    19:   = f.password_field :password_confirmation
+    20: 
+    21:   = f.submit '作成'
+    22: - end
+  
+app/views/students/new.html.haml:22
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 19:59:05 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    1: %h1 学生アカウント作成
+    2: = form_for(@user, students_new_path) do |f|
+    3:   = f.label :name
+    4:   = f.text_field :name
+    5: 
+  
+app/views/students/new.html.haml:2:in `_app_views_students_new_html_haml__26977366615490467_70093557188960'
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 19:59:35 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    1: %h1 学生アカウント作成
+    2: = form_for(@student, students_new_path) do |f|
+    3:   = f.label :name
+    4:   = f.text_field :name
+    5: 
+  
+app/views/students/new.html.haml:2:in `_app_views_students_new_html_haml__26977366615490467_70093521025140'
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:00:01 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (83.9ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `students_path' for #<#<Class:0x007f7fdb1e8a18>:0x007f7fd75d33e8>
+Did you mean?  students_new_path):
+    1: %h1 学生アカウント作成
+    2: = form_for(@student) do |f|
+    3:   = f.label :name
+    4:   = f.text_field :name
+    5: 
+  
+app/views/students/new.html.haml:2:in `_app_views_students_new_html_haml__26977366615490467_70093525402540'
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:00:28 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    1: %h1 学生アカウント作成
+    2: = form_for(@student, students_new_path) do |f|
+    3:   = f.label :name
+    4:   = f.text_field :name
+    5: 
+  
+app/views/students/new.html.haml:2:in `_app_views_students_new_html_haml__26977366615490467_70093547635240'
+Started PUT "/__web_console/repl_sessions/0a06c9a4abf5a585a1ca031934afc2e5" for 127.0.0.1 at 2017-08-19 20:06:10 +0900
+Started PUT "/__web_console/repl_sessions/0a06c9a4abf5a585a1ca031934afc2e5" for 127.0.0.1 at 2017-08-19 20:06:22 +0900
+Started PUT "/__web_console/repl_sessions/0a06c9a4abf5a585a1ca031934afc2e5" for 127.0.0.1 at 2017-08-19 20:06:30 +0900
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:09:01 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (30.2ms)
+Completed 200 OK in 317ms (Views: 295.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:10:14 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:10:21 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:10:30 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (18.3ms)
+Completed 200 OK in 225ms (Views: 199.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:15:58 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (19.2ms)
+Completed 200 OK in 224ms (Views: 197.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:17:44 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:18:18 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:18:27 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:19:29 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:19:52 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:26:04 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (163.8ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `student_new_path' for #<#<Class:0x007fcc84743d78>:0x007fcc8472ea90>
+Did you mean?  students_new_path):
+    1: %h1.title 学生アカウント作成
+    2: = form_for(@student, url: student_new_path) do |f|
+    3:   %table(align="center")
+    4:     %tr
+    5:       %td= f.label :name, '氏名'
+  
+app/views/students/new.html.haml:2:in `_app_views_students_new_html_haml__982932851961487420_70258186145020'
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:26:21 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (16.2ms)
+Completed 200 OK in 242ms (Views: 239.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:32:55 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 219ms (Views: 184.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/students/new" for 127.0.0.1 at 2017-08-19 20:32:56 +0900
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xvZybFS8mXfFgGq5AUB7S4xd+2Rn6upGZDe+Bu1+GP68oXUnPPSGRD5DDTuPqwzRnXObtdQmYDEpcaa7o8nRHg==", "student"=>{"name"=>"", "grade"=>"1", "department"=>"AD", "education_number"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"作成"}
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h1.title 学生アカウント作成
+    2: = form_for(@student, url: students_new_path) do |f|
+    3:   %table(align="center")
+    4:     %tr
+    5:       %td= f.label :name, '氏名'
+  
+app/views/students/new.html.haml:2:in `_app_views_students_new_html_haml__1889206930734764109_70247918424720'
+app/controllers/students_controller.rb:10:in `create'
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:33:12 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (24.8ms)
+Completed 200 OK in 79ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students/new" for 127.0.0.1 at 2017-08-19 20:33:22 +0900
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xvbC7Z+aHH3DzckdxlaGsDqN+0oFz8WS1oCQw0dPYcDhJe5g6Iedz5fxjOKbl+16omeuMKUWPaBu2zibOFYFVg==", "student"=>{"name"=>"ttt", "grade"=>"1", "department"=>"AD", "education_number"=>"1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"作成"}
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h1.title 学生アカウント作成
+    2: = form_for(@student, url: students_new_path) do |f|
+    3:   %table(align="center")
+    4:     %tr
+    5:       %td= f.label :name, '氏名'
+  
+app/views/students/new.html.haml:2:in `_app_views_students_new_html_haml__1889206930734764109_70247897292840'
+app/controllers/students_controller.rb:10:in `create'
+Started PUT "/__web_console/repl_sessions/15441aa3b04a000240c74b177b41fb4e" for 127.0.0.1 at 2017-08-19 20:33:40 +0900
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:35:26 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 54ms (Views: 33.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/students/new" for 127.0.0.1 at 2017-08-19 20:35:44 +0900
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I5zHyVaApq6f7Ns1TtlrOg/VU/3yOibNg15jwGgAY3IET+tEIZ0nHMvQnsoTGADwlz8Gh1Lj3v87BcuYFxkH5A==", "student"=>{"name"=>"sss", "grade"=>"1", "department"=>"AD", "education_number"=>"sss", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"作成"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Student.):
+  
+app/controllers/students_controller.rb:10:in `create'
+Started GET "/students/new" for 127.0.0.1 at 2017-08-19 20:40:02 +0900
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 54ms (Views: 31.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/students/new" for 127.0.0.1 at 2017-08-19 20:40:10 +0900
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpNAFAInm1dHGZLxBBe1JHoaodeoN7SI2zGABVNE45RlQGyZdToa5RMl1w5Z1t7u4vD0rQjuTLpjaihdLF2HAg==", "student"=>{"name"=>"sss", "grade"=>"1", "department"=>"AD", "education_number"=>"ass", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"作成"}
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 135ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "grade", "department", "education_number", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", 0], ["grade", 5], ["department", "CS"], ["education_number", 13547], ["password_digest", "$2a$10$Wed6uvzlm3eE3.EXGmOZIuCDdIruK7wIUKTmzoZsiNVQnEUX60Fe2"], ["created_at", "2017-08-19 11:52:48.113679"], ["updated_at", "2017-08-19 11:52:48.113679"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."education_number" = ? LIMIT ?[0m  [["education_number", 13547], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."education_number" = ? LIMIT ?[0m  [["education_number", 13547], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "grade", "department", "education_number", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", 0], ["grade", 5], ["department", "CS"], ["education_number", 13547], ["password_digest", "$2a$10$Pm4cgeDBTD7ZJP/q2zlLWOuxJI8Hl3W5ZdXi.nRUV9BIKsVUQqs/2"], ["created_at", "2017-08-19 12:02:46.618767"], ["updated_at", "2017-08-19 12:02:46.618767"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (8.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/students/new" for 127.0.0.1 at 2017-08-19 21:49:55 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpNAFAInm1dHGZLxBBe1JHoaodeoN7SI2zGABVNE45RlQGyZdToa5RMl1w5Z1t7u4vD0rQjuTLpjaihdLF2HAg==", "student"=>{"name"=>"sss", "grade"=>"1", "department"=>"AD", "education_number"=>"ass", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"作成"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."education_number" = ? LIMIT ?[0m  [["education_number", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 381ms (Views: 235.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/students/new" for 127.0.0.1 at 2017-08-19 21:50:15 +0900
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpNAFAInm1dHGZLxBBe1JHoaodeoN7SI2zGABVNE45RlQGyZdToa5RMl1w5Z1t7u4vD0rQjuTLpjaihdLF2HAg==", "student"=>{"name"=>"sss", "grade"=>"1", "department"=>"AD", "education_number"=>"ass", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"作成"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."education_number" = ? LIMIT ?[0m  [["education_number", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 133ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/students/new" for 127.0.0.1 at 2017-08-19 21:54:46 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpNAFAInm1dHGZLxBBe1JHoaodeoN7SI2zGABVNE45RlQGyZdToa5RMl1w5Z1t7u4vD0rQjuTLpjaihdLF2HAg==", "student"=>{"name"=>"sss", "grade"=>"1", "department"=>"AD", "education_number"=>"ass", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"作成"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."education_number" = ? LIMIT ?[0m  [["education_number", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering students/new.html.haml within layouts/application
+  Rendered students/new.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 403ms (Views: 240.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/students/new" for 127.0.0.1 at 2017-08-19 21:55:33 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F/8YXKB8ximEoReksTvfbrTbxWUBcmAuGTBl7w/Pk0VtqB8XyDTZGn9icCY/0Kj0pfWltLK+6llUdn1SQXhapQ==", "student"=>{"name"=>"Hello", "grade"=>"1", "department"=>"AD", "education_number"=>"10101", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."education_number" = ? LIMIT ?[0m  [["education_number", 10101], ["LIMIT", 1]]
+  [1m[35mSQL (9.9ms)[0m  [1m[32mINSERT INTO "students" ("name", "grade", "department", "education_number", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", 0], ["grade", 1], ["department", "AD"], ["education_number", 10101], ["password_digest", "$2a$10$SsMjrcmx4p0N7K8/iBBzEerYvLr1PQhgxXMLoDmHA5xHbJUfwoIpG"], ["created_at", "2017-08-19 12:55:33.714501"], ["updated_at", "2017-08-19 12:55:33.714501"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for StudentsController#create, rendering head :no_content
+Completed 204 No Content in 199ms (ActiveRecord: 12.0ms)
+
+
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "students"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" integer, "grade" integer, "department" varchar, "education_number" integer, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170819102421)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-19 12:56:16.103533"], ["updated_at", "2017-08-19 12:56:16.103533"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" integer, "grade" integer, "department" varchar, "education_number" integer, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170819102421)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-19 12:56:16.125119"], ["updated_at", "2017-08-19 12:56:16.125119"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT ?[0m  [["LIMIT", 11]]
