@@ -1,14 +1,13 @@
 # Special Syusseki System
 
 ## Specifications
-- Rails 5.1.0
+- Rails 5.1.2
 - Ruby 2.4.0
 - git 2.13.4
 
-### Library
+### Specific Library
 
-- bcrypt 3.1.7
-- haml-rails 0.9.0
+- haml-rails
 - webcamjs
 
 ## Attention
