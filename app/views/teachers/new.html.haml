@@ -1,0 +1,31 @@
+%div.container
+  %h1
+    %center 教員アカウント作成
+
+  = form_for(@teacher, url: teachers_new_path) do |f|
+    %table(align="center")
+      %tr
+        %td= f.label :name, '氏名'
+        %td= f.text_field :name
+
+      %tr
+        %td= f.label :email, 'メールアドレス'
+        %td= f.email_field :email
+
+      %tr
+        %td= f.label :room_grade, '担当学年'
+        %td= f.select :room_grade, { '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5' }
+
+      %tr
+        %td= f.label :room_course, '担当クラス, 学科'
+        %td= f.select :room_course, { 'デザイン学科' => 'AD', '電気工学科' => 'EE', '機械電子工学科' => 'ME', '情報工学科' => 'CS', 'A' => 'A', 'B' => 'B', 'C' => 'C', 'D' => 'D' }
+
+      %tr
+        %td= f.label :password, 'パスワード'
+        %td= f.password_field :password
+
+      %tr
+        %td= f.label :password_confirmation, 'パスワード確認'
+        %td= f.password_field :password_confirmation
+
+    %center= f.submit '作成'

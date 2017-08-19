@@ -9,5 +9,8 @@ class CreateStudents < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    # 学籍番号に一意性を付与する
+    add_index :students, :education_number, unique: true
   end
 end
