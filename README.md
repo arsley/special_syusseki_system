@@ -1,24 +1,16 @@
-# README
+# Special Syusseki System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Specifications
+- Rails 5.1.0
+- Ruby 2.4.0
+- git 2.13.4
 
-Things you may want to cover:
+### Library
 
-* Ruby version
+- bcrypt 3.1.7
+- haml-rails 0.9.0
+- webcamjs
 
-* System dependencies
+## Attention
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Work in progress.
