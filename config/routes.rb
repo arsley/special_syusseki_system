@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'static_pages#choice'
+
   # 教員関連のルーティング
   get 'teachers/login'
   get 'teachers/new'
