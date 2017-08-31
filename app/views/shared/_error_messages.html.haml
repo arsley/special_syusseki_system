@@ -1,0 +1,6 @@
+- if @teacher.errors.any?
+  #error_explanation
+    .alert.alert-danger
+      %ul
+        - @teacher.errors.full_messages.each do |err_msg|
+          %li= err_msg

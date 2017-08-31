@@ -1,31 +1,30 @@
-%div.containter
-  %h1
-    %center 学生アカウント作成
+%h1
+  %center 学生アカウント作成
 
-  = form_for(@student, url: students_new_path) do |f|
-    %table(align="center")
-      %tr
-        %td= f.label :name, '氏名'
-        %td= f.text_field :name
+= form_for(@student, url: students_new_path) do |f|
+  %table(align="center")
+    %tr
+      %td= f.label :name, '氏名'
+      %td= f.text_field :name
 
-      %tr
-        %td= f.label :grade, '学年'
-        %td= f.select :grade, { '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5' }
+    %tr
+      %td= f.label :grade, '学年'
+      %td= f.select :grade, { '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5' }
 
-      %tr
-        %td= f.label :department, '学科'
-        %td= f.select :department, { 'デザイン学科' => 'AD', '電気工学科' => 'EE', '機械電子工学科' => 'ME', '情報工学科' => 'CS' }
+    %tr
+      %td= f.label :department, '学科'
+      %td= f.select :department, { 'デザイン学科' => 'AD', '電気工学科' => 'EE', '機械電子工学科' => 'ME', '情報工学科' => 'CS' }
 
-      %tr
-        %td= f.label :education_number, '学籍番号'
-        %td= f.text_field :education_number
+    %tr
+      %td= f.label :education_number, '学籍番号'
+      %td= f.text_field :education_number
 
-      %tr
-        %td= f.label :password, 'パスワード'
-        %td= f.password_field :password
+    %tr
+      %td= f.label :password, 'パスワード'
+      %td= f.password_field :password
 
-      %tr
-        %td= f.label :password_confirmation, 'パスワード確認'
-        %td= f.password_field :password_confirmation
+    %tr
+      %td= f.label :password_confirmation, 'パスワード確認'
+      %td= f.password_field :password_confirmation
 
-    %center= f.submit '作成'
+  %center= f.submit '作成'

@@ -1,0 +1,6 @@
+teacher1:
+  name: Teacher1
+  email: teacher@foo.edu
+  room_grade: 5
+  room_course: CS
+  password_digest: <%= Teacher.digest('teacher') %>

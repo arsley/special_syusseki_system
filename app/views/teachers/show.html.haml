@@ -1,0 +1,7 @@
+%h1
+  %center 教員管理画面
+
+%h2
+  %center #{current_teacher.name} 先生
+
+%center= link_to 'ログアウト', teacher_logout_path, method: :delete

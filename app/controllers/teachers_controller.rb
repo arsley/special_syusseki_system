@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-  def index;
+  def show
     # @todo ダッシュボード画面
   end
 
@@ -10,7 +10,9 @@ class TeachersController < ApplicationController
   def create
     @teacher = Teacher.new(teacher_params)
     if @teacher.save
-      # @todo ログイン後の画面へ
+      login_teacher @teacher
+      flash[:success] = 'ログインしました'
+      redirect_to @teacher
     else
       render 'new'
     end
@@ -22,14 +24,6 @@ class TeachersController < ApplicationController
 
   def update
     # @todo アカウント情報変更
-  end
-
-  def login
-    # @todo ログイン
-  end
-
-  def logout
-    # @todo ログアウト
   end
 
   private

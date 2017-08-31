@@ -6,4 +6,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
-    = yield
+    .container
+      - flash.each do |msg_type, msg|
+        %div{class: "alert alert-#{msg_type}"}= msg
+
+      = yield

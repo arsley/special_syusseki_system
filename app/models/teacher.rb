@@ -28,4 +28,10 @@ class Teacher < ApplicationRecord
 
   # パスワード
   has_secure_password
+
+  # テスト用隠蔽パスワード生成
+  def self.digest(password)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
+    BCrypt::Password.create(password, cost: cost)
+  end
 end
