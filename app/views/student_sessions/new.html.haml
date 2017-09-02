@@ -1,0 +1,14 @@
+%h1
+  %center 学生ログイン
+
+= form_for(:student_sessions, url: student_login_path) do |f|
+  %table(align="center")
+    %tr
+      %td= f.label :education_number
+      %td= f.text_field :education_number
+
+    %tr
+      %td= f.label :password
+      %td= f.password_field :password
+
+  %center= f.submit 'ログイン'
