@@ -1,7 +1,7 @@
 %h1
   %center 学生ログイン
 
-= form_for(:student_sessions, url: student_login_path) do |f|
+= form_for(:student_sessions, url: student_login_path, html: { id: 'student_login_form' }) do |f|
   %table(align="center")
     %tr
       %td= f.label :education_number
@@ -11,4 +11,24 @@
       %td= f.label :password
       %td= f.password_field :password
 
-  %center= f.submit 'ログイン'
+    %tr
+      %td Snapshot
+      %td
+        #snapshot(style="width: 240px; height: 240px;")
+      = f.hidden_field :snapshot
+
+  %center
+    %input{type: 'button', value: '自撮り & 打刻', id: 'btnSubmit', onClick: '_submit()'}
+
+:javascript
+  Webcam.attach('snapshot');
+  Webcam.set( 'constraints', {
+    width: 240,
+    height: 240
+  });
+  function _submit() {
+    Webcam.snap( data_uri => {
+      document.getElementById('student_sessions_snapshot').value = data_uri;
+      document.getElementById('student_login_form').submit();
+    });
+  }
