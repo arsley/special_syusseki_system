@@ -1,7 +1,7 @@
 class CreateTimecards < ActiveRecord::Migration[5.1]
   def change
     create_table :timecards do |t|
-      t.text :img_base64
+      t.text :snapshot
       t.string :status
       t.references :student, foreign_key: true
 

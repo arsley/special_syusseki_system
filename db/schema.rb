@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20170923094523) do
   end
 
   create_table "timecards", force: :cascade do |t|
-    t.text "img_base64"
+    t.text "snapshot"
     t.string "status"
     t.integer "student_id"
     t.datetime "created_at", null: false

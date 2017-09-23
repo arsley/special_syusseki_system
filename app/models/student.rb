@@ -1,6 +1,7 @@
 class Student < ApplicationRecord
   # 学生はタイムカード(のデータ)を複数持つ
-  has_many :timecards
+  # ユーザが削除された時、打刻データも削除させる
+  has_many :timecards, dependent: :destroy
 
   # 基本的に空白は許さない
   validates :name, presence: true

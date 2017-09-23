@@ -21,4 +21,5 @@ Rails.application.routes.draw do
 
   # リソースのルーティング
   resources :teachers, only: [:show]
+  resources :students, only: [:show]
 end
