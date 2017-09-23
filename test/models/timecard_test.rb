@@ -3,7 +3,7 @@ require 'test_helper'
 class TimecardTest < ActiveSupport::TestCase
   def setup
     @student  = students(:student1)
-    @timecard = @student.timecards.build(img_base64: "temporary", status: "unchecked")
+    @timecard = @student.timecards.build(snapshot: "temporary", status: "unchecked")
   end
 
   test "should be valid" do
