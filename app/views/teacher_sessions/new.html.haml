@@ -1,14 +1,14 @@
 %h1
-  %center 教員ログイン
+  %center(class="") 教員ログイン
 
 = form_for(:teacher_sessions, url: teacher_login_path) do |f|
-  %table(align="center")
-    %tr
-      %td= f.label :email
-      %td= f.email_field :email
+  .main
+    .email-form
+      = f.label :email,class:"text"
+      = f.email_field :email,class:"typebox"
 
-    %tr
-      %td= f.label :password
-      %td= f.password_field :password
+    .pass-form
+      = f.label :password,class:"text"
+      = f.password_field :password,class:"typabox"
 
-  %center= f.submit 'ログイン'
+  %center(class="login-button")= f.submit 'ログイン'

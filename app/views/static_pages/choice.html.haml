@@ -1,8 +1,17 @@
-%h1
-  %center 機能選択
+
+%h1(class="title")
+  %center ユーザーを選択してください
 %table(align="center")
-  %tr
+  %tr(class="buttons")
+
     %td
-      %button= link_to '教員用', teacher_login_path
+      -# %div(class="TeachersButtonBox")
+        %a(class="TeachersButton"){:href =>"/teacher/login"}teacher
+      .teacher-button-box
+        = link_to 'teacher', teacher_login_path, class: "teacher-button"
+
     %td
-      %button 学生用
+      -#%div(class="StudentsButtonBox")
+        %a(class="StudentsButton"){:href =>"ここにpath"} student
+      .student-button-box
+        = link_to 'student',students_login_path,class: "student-button"
