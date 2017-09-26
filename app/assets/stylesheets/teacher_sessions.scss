@@ -7,31 +7,58 @@ body{
   height: 100%;
   margin:0;
 }
+.title{
+  width: 100%;
+  height:10vh;
+}
+h1{
+  margin: 0;
+}
 .alert-danger{
   color:red;
+  position: absolute;
+  margin-top: 25vh;
+  width: 100%;
+  text-align:center;
+  display: block;
+}
+.email-form{
+  width: 60vh;
+}
+.height{
 }
 .typebox{
   display:inline-block;
   background-color: rbga(255,255,255,0.8);
-  font-size: 15px;
-  weight:360px;
+  font-size: 20px;
+  width:28vh;
+  height: 40px;
+  text-align: right;
+
 }
 .text{
-display: inline-block;
-  font-size: 15px;
-  weight:180px;
+  display: inline-block;
+  font-size: 20px;
+  width:20vh;
+  height: 46px;
+  margin: auto;
+  text-align: center;
 }
 .main{
   display: block;
   width: 60vh;
-  height: 30vh;
+  height: 20vh;
   margin: auto;
+}
+.login-button-space{
+  width: 100%;
 }
 .login-button{
   display: block;
   margin:auto;
-  width: 100%;
-  height: 50px;
+  width: 20vh;
+  height: 10vh;
+  font-size: 40px;
   &:hover{
     color: #fd9535;
   }
