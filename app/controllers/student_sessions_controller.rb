@@ -1,6 +1,4 @@
 class StudentSessionsController < ApplicationController
-  include StudentSessionsHelper
-
   def new
   end
 
