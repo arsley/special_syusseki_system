@@ -10,11 +10,16 @@ Rails.application.routes.draw do
   post 'teacher/login', to: 'teacher_sessions#create'
   delete 'teacher/logout', to: 'teacher_sessions#destroy'
 
-  # 生徒関連のルーティング
-  get 'students/login'
+  # 学生関連のルーティング
   get 'students/new'
   post 'students/new', to: 'students#create'
 
+  # 学生ログインのルーティング
+  get 'student/login', to: 'student_sessions#new'
+  post 'student/login', to: 'student_sessions#create'
+  delete 'student/logout', to: 'student_sessions#destroy'
+
   # リソースのルーティング
   resources :teachers, only: [:show]
+  resources :students, only: [:show]
 end

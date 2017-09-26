@@ -1,1 +1,6 @@
-
+student1:
+  name: Student1
+  grade: 5
+  department: CS
+  education_number: 13547
+  password_digest: <%= Student.digest('teacher') %>
