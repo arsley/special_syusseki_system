@@ -1,6 +1,4 @@
 class TeacherSessionsController < ApplicationController
-  include TeacherSessionsHelper
-
   def new
   end
 
