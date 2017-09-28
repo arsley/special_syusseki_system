@@ -1,4 +1,7 @@
 class Teacher < ApplicationRecord
+  # 各教員は、1人以上の学生を担当として持つ
+  has_many :students, dependent: :destroy
+
   # 正しいクラスの組み合わせかどうかを検証するための定数とメソッド
   VALID_COURSES = %w[1A 1B 1C 1D 2A 2B 2C 2D
                      3AD 3EE 3ME 3CS 4AD 4EE 4ME 4CS 5AD 5EE 5ME 5CS].freeze
