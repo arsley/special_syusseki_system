@@ -3,8 +3,86 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /*new.html.haml start*/
-
+body{
+  width: 100vh;
+  height: 100vh;
+}
+.name-box{
+  display:block;
+  width: 60vh;
+  height:30px;
+  margin: auto;
+}
+.title-box{
+  width: 100vh;
+  height:10vh;
+  display: block;
+}
+.title{
+  text-align: center;
+  margin: auto;
+  width: 20vh;
+}
+.grade-box{
+  display: block;
+  width: 60vh;
+  height:30px;
+  margin: auto;
+}
+.class-box{
+  display: block;
+  width: 60vh;
+  height:30px;
+  margin: auto;
+}
+.number-box{
+  display: block;
+  width: 60vh;
+  height:30px;
+  margin: auto;
+}
+.pass-box{
+  display: block;
+  width:60vh;
+  height:30px;
+  margin: 0;
+}
+.pass-box{
+  display: block;
+  width:60vh;
+  height:30px;
+  margin: 0;
+}
+.main{
+  display: block;
+  width:60vh;
+  height:70vh;
+  margin: auto;
+  font-size:20px;
+}
+.text{
+  display: inline-block;
+  width:30vh;
+  height: 30px;
+  text-align: center;
+}
+.type-box{
+  display: inline-block;
+  width: 30vh;
+  height: 30px
+}
+.create-button{
+  width: 30vh;
+  margin: auto;
+}
+.create-button-box{
+  width: 100vh;
+  height:20vh;
+  margin: auto;
+}
 /*new.html.haml end*/
 
 /*show.html.haml start*/
+
+
 /*show.html.haml end*/

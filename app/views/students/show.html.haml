@@ -1,7 +1,8 @@
-%h1
-  %center 学生画面
+%h1(class="title-box")
+  %center(class="title") 学生画面
 
-%h2
+%h2(class="print-name-box")
   %center #{current_student.name} さん
 
-%center= link_to 'ログアウト', student_logout_path, method: :delete
+.logout-button-box
+  = link_to 'ログアウト', student_logout_path,class:"logout-button", method: :delete
