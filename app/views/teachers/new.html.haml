@@ -2,7 +2,7 @@
   %center 教員アカウント作成
 
 = form_for(@teacher, url: teachers_new_path) do |f|
-  = render 'shared/error_messages'
+  = render 'error_messages'
   %table(align="center")
     %tr
       %td= f.label :name, '氏名'
@@ -18,7 +18,7 @@
 
     %tr
       %td= f.label :room_course, '担当クラス, 学科'
-      %td= f.select :room_course, { 'デザイン学科' => 'AD', '電気工学科' => 'EE', '機械電子工学科' => 'ME', '情報工学科' => 'CS' }, class: 'form-control'
+      %td= f.select :room_course, { 'デザイン学科' => 'AD', '電気工学科' => 'EE', '機械電子工学科' => 'ME', '情報工学科' => 'CS', '混成A' => 'A', '混成B' => 'B', '混成C' => 'C', '混成D' => 'D' }, class: 'form-control'
 
     %tr
       %td= f.label :password, 'パスワード'
