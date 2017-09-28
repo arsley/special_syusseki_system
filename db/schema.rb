@@ -14,13 +14,13 @@ ActiveRecord::Schema.define(version: 20170923094523) do
 
   create_table "students", force: :cascade do |t|
     t.string "name"
-    t.integer "grade"
-    t.string "department"
     t.integer "education_number"
     t.string "password_digest"
+    t.integer "teacher_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["education_number"], name: "index_students_on_education_number", unique: true
+    t.index ["teacher_id"], name: "index_students_on_teacher_id"
   end
 
   create_table "teachers", force: :cascade do |t|
