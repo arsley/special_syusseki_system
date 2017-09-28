@@ -2,9 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
-  display: block;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin:0;
 }
 .title{
@@ -25,7 +24,13 @@ h1{
 .email-form{
   width: 60vh;
 }
-.height{
+.container{
+  width: 100%;
+  margin: 0;
+}
+.new_student{
+  width: 100%;
+  margin: 0;
 }
 .typebox{
   display:inline-block;
@@ -36,15 +41,26 @@ h1{
   text-align: right;
 
 }
+.chose-grade{
+  display: inline-block;
+  width: 30vh;
+  height: 46px;
+}
+.chose-class{
+  display: inline-block;
+  width: 30vh;
+  font-size: 20px;
+  height: 46px;
+}
 .text{
   display: inline-block;
   font-size: 20px;
   width:20vh;
   height: 46px;
   margin: auto;
-  text-align: center;
+  text-align: right;
 }
-.main{
+.main-student-news{
   display: block;
   width: 60vh;
   height: 20vh;
@@ -52,6 +68,17 @@ h1{
 }
 .login-button-space{
   width: 100%;
+}
+.create-button-box{
+  display: block;
+  width: 100vh;
+  height: 10vh;
+}
+.create-button{
+  weight:30vh;
+  height: 10vh;
+  margin:auto;
+  font-size: 20px;
 }
 .login-button{
   display: block;

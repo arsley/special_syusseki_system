@@ -1,30 +1,31 @@
-%h1
-  %center 学生アカウント作成
+%h1(class="title-box")
+  %center(class="title") 学生アカウント作成
 
 = form_for(@student, url: students_new_path) do |f|
-  %table(align="center")
-    %tr
-      %td= f.label :name, '氏名'
-      %td= f.text_field :name
+  .main
+    .name-box
+      = f.label :name, '氏名',class:"text"
+      = f.text_field :name,class:"type-box"
 
-    %tr
-      %td= f.label :grade, '学年'
-      %td= f.select :grade, { '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5' }
+    .grade-box
+      = f.label :grade, '学年',class:"text"
+      = f.select :grade, { '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5' },class:"chose-gradde"
 
-    %tr
-      %td= f.label :department, '学科'
-      %td= f.select :department, { 'デザイン学科' => 'AD', '電気工学科' => 'EE', '機械電子工学科' => 'ME', '情報工学科' => 'CS' }
+    .class-box
+      = f.label :department, '学科',class:"text"
+      = f.select :department, { 'デザイン学科' => 'AD', '電気工学科' => 'EE', '機械電子工学科' => 'ME', '情報工学科' => 'CS' }, class:"chose-class"
 
-    %tr
-      %td= f.label :education_number, '学籍番号'
-      %td= f.text_field :education_number
+    .number-box
+      = f.label :education_number, '学籍番号',class:"text"
+      = f.text_field :education_number,class:"type-box"
 
-    %tr
-      %td= f.label :password, 'パスワード'
-      %td= f.password_field :password
+    .pass-box
+      = f.label :password, 'パスワード',class:"text"
+      = f.password_field :password,class:"type-box-pass"
 
-    %tr
-      %td= f.label :password_confirmation, 'パスワード確認'
-      %td= f.password_field :password_confirmation
+    .pass-box
+      = f.label :password_confirmation, 'パスワード確認',class:"text"
+      = f.password_field :password_confirmation,class:"type-box-pass"
 
-  %center= f.submit '作成'
+    .create-button-box
+      = f.submit '作成',class:"create-button"
