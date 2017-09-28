@@ -3,6 +3,9 @@ class Student < ApplicationRecord
   # ユーザが削除された時、打刻データも削除させる
   has_many :timecards, dependent: :destroy
 
+  # 学生は、ただ1人の担任のもとで指導を受ける
+  belongs_to :teacher
+
   # 基本的に空白は許さない
   validates :name, presence: true
 

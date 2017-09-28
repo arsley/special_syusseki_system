@@ -1,4 +1,6 @@
 class TeachersController < ApplicationController
+  before_action :teacher_logged_in, only: %i[edit update]
+
   def show
     # @todo ダッシュボード画面
   end
@@ -33,5 +35,12 @@ class TeachersController < ApplicationController
       .require(:teacher)
       .permit(:name, :email, :password, :password_confirmation,
               :room_grade, :room_course)
+  end
+
+  def logged_in_teacher
+    unless teacher_logged_in?
+      flash[:danger] = '教員ログインが必要なページです'
+      redirect_to teacher_login_url
+    end
   end
 end
