@@ -4,6 +4,8 @@
 = form_for(@student, url: students_new_path) do |f|
   .main-student-new
     .typa-form
+      .error_messages-new
+        = render 'error_messages'
       .name-box
         = f.label :name, '氏名',class:"text"
         = f.text_field :name,class:"type-box"
@@ -18,7 +20,6 @@
 
       .number-box
         = f.label :education_number, '学籍番号',class:"text"
-        = f.text_field :education_number,class:"type-box"
 
       .pass-box
         = f.label :password, 'パスワード',class:"text"
