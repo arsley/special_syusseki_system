@@ -1,7 +1,47 @@
-%h1
+%h1(class="title")
   %center 教員管理画面
 
 %h2
   %center #{current_teacher.name} 先生
 
-%center= link_to 'ログアウト', teacher_logout_path, method: :delete
+.teacher-buttons-box(align="center")
+  = link_to 'アカウント登録', "#"
+  = link_to 'ルール設定', "#"
+  = link_to '実施日設定', "#"
+
+
+.teacher-stilyet-buttons
+= link_to 'チェック済み 5件', class: "yet-button"
+= link_to '未チェック 3件', class: "stil-button"
+
+%h3
+.calendar
+  %table(align="center" table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333")
+
+    %tr(align="center")
+      %td(colspan=5)= '9月'
+
+    %tr
+      %td= '月'
+      %td= '火'
+      %td= '水'
+      %td= '木'
+      %td= '金'
+
+    %tr
+      %td= '4日'
+      %td= '5日'
+      %td= '6日 (本日)'
+      %td= '7日'
+      %td= '8日'
+
+    %tr
+      %td= link_to 'チェック済み(7件)' ,"#"
+      %td= link_to '未チェックあり(3件)' ,"#"
+      %td= link_to '未チェックあり(6件)' ,"#"
+      %td= ''
+      %td= ''
+
+
+%h4
+  %center= link_to 'ログアウト', teacher_logout_path, method: :delete
