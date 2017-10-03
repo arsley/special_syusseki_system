@@ -1,0 +1,18 @@
+%table(align="center")
+  %tr(align="center")
+    %th 氏名
+    %th 最新打刻
+    %th 打刻確認状況
+
+  - students.each do |student|
+    - timecard = student.timecards.last
+    - if timecard
+      %tr(align="center")
+        %td= link_to student.name, "timecards/student/#{student.id}"
+        %td= timecard.created_at.to_formatted_s(:timecard)
+        %td= link_to timecard.puts_status, timecard_path(timecard.id)
+    - else
+      %tr(align="center")
+        %td= link_to student.name, "timecards/student/#{student.id}"
+        %td データ未登録
+        %td データ未登録

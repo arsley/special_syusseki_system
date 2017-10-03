@@ -17,5 +17,6 @@ module SSSApp
 
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
+    Time::DATE_FORMATS[:timecard] = '%m/%d %H:%M:%S'
   end
 end

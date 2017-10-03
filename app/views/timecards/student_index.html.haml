@@ -1,0 +1,9 @@
+%h1
+  %center 打刻管理ページ(個人)
+
+%h2
+  %center= "#{@student.name} さんの打刻一覧"
+
+= render 'list_timecards', timecards: @timecards
+
+= link_to '<<打刻管理ページ(一覧)へ', timecards_path
