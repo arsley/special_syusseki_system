@@ -1,8 +1,7 @@
 class TeachersController < ApplicationController
-  before_action :teacher_logged_in, only: %i[edit update]
+  before_action :logged_in_teacher, only: %i[show edit update]
 
   def show
-    # @todo ダッシュボード画面
   end
 
   def new
@@ -38,9 +37,8 @@ class TeachersController < ApplicationController
   end
 
   def logged_in_teacher
-    unless teacher_logged_in?
-      flash[:danger] = '教員ログインが必要なページです'
-      redirect_to teacher_login_url
-    end
+    return if teacher_logged_in?
+    flash[:danger] = '教員ログインが必要なページです'
+    redirect_to teacher_login_url
   end
 end
