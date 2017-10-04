@@ -26,6 +26,6 @@ class StudentSessionsController < ApplicationController
     params
       .require(:student_sessions)
       .permit(:snapshot)
-      .merge(status: "unchecked")
+      .merge(status: 'unchecked')
   end
 end

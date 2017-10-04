@@ -14,7 +14,7 @@
     %tr
       %td Snapshot
       %td
-        #snapshot(style="width: 240px; height: 240px;")
+        #snapshot(style="width: 700px; height: 460px;")
       = f.hidden_field :snapshot
 
   %center
@@ -23,8 +23,8 @@
 :javascript
   Webcam.attach('snapshot');
   Webcam.set( 'constraints', {
-    width: 240,
-    height: 240
+    width: 700,
+    height: 460
   });
   function _submit() {
     Webcam.snap( data_uri => {
