@@ -3,6 +3,7 @@
     %th 氏名
     %th 最新打刻
     %th 打刻確認状況
+    %th 連続出席日数
 
   - students.each do |student|
     - timecard = student.timecards.last
@@ -11,8 +12,10 @@
         %td= link_to student.name, "timecards/student/#{student.id}"
         %td= timecard.created_at.to_formatted_s(:timecard)
         %td= link_to timecard.puts_status, timecard_path(timecard.id)
+        %td= "#{student.counts_attendance} / 12"
     - else
       %tr(align="center")
         %td= link_to student.name, "timecards/student/#{student.id}"
+        %td データ未登録
         %td データ未登録
         %td データ未登録

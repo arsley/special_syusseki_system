@@ -15,10 +15,9 @@ class Timecard < ApplicationRecord
   def puts_status
     case status
     when 'unchecked' then '未確認'
-    when 'fail' then 'NG'
-    when 'pass' then 'OK'
-    when 'sick' then '病欠'
-    when 'through' then '公欠'
+    when 'fail' then '欠席'
+    when 'pass' then '出席'
+    when 'through' then '公用欠席関係'
     end
   end
 end

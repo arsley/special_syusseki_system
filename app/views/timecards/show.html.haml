@@ -19,8 +19,11 @@
     %td 打刻確認状況
     %td= @timecard.puts_status
 
+%table(align="center")
   %tr(align="center")
     %td
       %button= link_to '出席', timecard_path(@timecard, status: 'pass'), method: :patch, data: { confirm: '出席扱いにします' }
     %td
       %button= link_to '欠席', timecard_path(@timecard, status: 'fail'), method: :patch, data: { confirm: '欠席扱いにします' }
+    %td
+      %button= link_to '公用欠席など', timecard_path(@timecard, status: 'through'), method: :patch, data: { confirm: '公用欠席扱いにします' }
