@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container{
-  width:100vh;
-  height:100vh;
-}
 /*show.html.haml start*/
 .teacher-stilyet-box{
   display: block;
@@ -22,7 +18,7 @@
   text-align: center;
   text-decoration: none;
   font-size:20px;
-  color:#;
+  color:#ffffff;
   &:hover{
     border: 2px #ffffff;
 
@@ -32,8 +28,7 @@
 .print-teacher-name{
   display: 100vh;
   text-align: center;
-  font-size:20px;
-  color:#;
+  color:#ffffff;
 
 }
 .yet-button{
