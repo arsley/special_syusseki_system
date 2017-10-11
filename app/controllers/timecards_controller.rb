@@ -12,11 +12,12 @@ class TimecardsController < ApplicationController
 
   def show
     @timecard = Timecard.find(params[:id])
+    @student  = @timecard.student
   end
 
   def update
     timecard = Timecard.find(params[:id])
-    timecard.update_attributes(status: params[:status])
+    timecard.update_attributes(status: timecard_update_params)
     flash[:success] = '更新しました、反映されているか確認してください'
     redirect_to timecard
   end
@@ -24,9 +25,7 @@ class TimecardsController < ApplicationController
   private
 
   def timecard_update_params
-    params
-      .require(:timecard)
-      .permit(:status)
+    params.permit(:status)[:status]
   end
 
   def logged_in_teacher
