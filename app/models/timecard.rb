@@ -10,4 +10,15 @@ class Timecard < ApplicationRecord
 
   # (打刻保存時)出席状況カラムが存在している必要がある
   validates :status, presence: true
+
+  # 打刻状況の表示をさせる
+  def puts_status
+    case status
+    when 'unchecked' then '未確認'
+    when 'fail' then 'NG'
+    when 'pass' then 'OK'
+    when 'sick' then '病欠'
+    when 'through' then '公欠'
+    end
+  end
 end

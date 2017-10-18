@@ -4,11 +4,7 @@
 %h2(class="ptint-teacher-name")
   %center #{current_teacher.name} 先生
 
-.teacher-menu-box(align="center")
-  = link_to 'アカウント登録', "#",class:"menu-button"
-  = link_to 'ルール設定', "#",class:"menu-button"
-  = link_to '実施日設定', "#",class:"menu-buttont"
-
+%center= link_to '打刻管理ページ', timecards_path
 
 %h4
   %center= link_to 'ログアウト', teacher_logout_path,class:"logout_button" ,method: :delete

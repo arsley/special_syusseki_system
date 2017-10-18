@@ -1,0 +1,26 @@
+%h1
+  %center 打刻確認
+
+%h2
+  %center 顔写真
+
+%center
+  %img{src: @timecard.snapshot}
+
+%h2
+  %center 打刻詳細
+
+%table(align="center")
+  %tr(align="center")
+    %td 打刻時間
+    %td= @timecard.created_at.to_formatted_s(:timecard)
+
+  %tr(align="center")
+    %td 打刻確認状況
+    %td= @timecard.puts_status
+
+  %tr(align="center")
+    %td
+      %button= link_to '出席', timecard_path(@timecard, status: 'pass'), method: :patch, data: { confirm: '出席扱いにします' }
+    %td
+      %button= link_to '欠席', timecard_path(@timecard, status: 'fail'), method: :patch, data: { confirm: '欠席扱いにします' }

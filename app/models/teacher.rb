@@ -6,7 +6,6 @@ class Teacher < ApplicationRecord
   VALID_COURSES = %w[1A 1B 1C 1D 2A 2B 2C 2D
                      3AD 3EE 3ME 3CS 4AD 4EE 4ME 4CS 5AD 5EE 5ME 5CS].freeze
   def course_valid?
-    course = room_grade.to_s + room_course.to_s
     unless VALID_COURSES.include?(course)
       errors.add(:room_grade,  'is something wrong')
       errors.add(:room_course, 'is something wrong')
@@ -36,5 +35,10 @@ class Teacher < ApplicationRecord
   def self.digest(password)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
     BCrypt::Password.create(password, cost: cost)
+  end
+
+  # 教員が担当するクラス名を返す
+  def course
+    room_grade.to_s + room_course.to_s
   end
 end

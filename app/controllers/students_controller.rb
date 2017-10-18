@@ -30,9 +30,8 @@ class StudentsController < ApplicationController
   end
 
   def logged_in_teacher
-    unless teacher_logged_in?
-      flash[:danger] = '教員ログインが必要なページです'
-      redirect_to teacher_login_url
-    end
+    return if teacher_logged_in?
+    flash[:danger] = '教員ログインが必要なページです'
+    redirect_to teacher_login_url
   end
 end
