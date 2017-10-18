@@ -2,7 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*show.html.haml start*/
+.container{
+  width:100%;
+  height:100%;
+
+}/*show.html.haml start*/
 .teacher-stilyet-box{
   display: block;
   width:100vh;
@@ -18,7 +22,7 @@
   text-align: center;
   text-decoration: none;
   font-size:20px;
-  color:#ffffff;
+  color:#fd9535;
   &:hover{
     border: 2px #ffffff;
 
@@ -28,7 +32,8 @@
 .print-teacher-name{
   display: 100vh;
   text-align: center;
-  color:#ffffff;
+  font-size:20px;
+  color:#fd9535;
 
 }
 .yet-button{
@@ -36,7 +41,11 @@
   font-size: 20px;
 
 }
-.calendar{
+.logout_button{
+  display: block;
+  text-decoration: none;
+
 
 }
+
 /*show.html.haml end*/
