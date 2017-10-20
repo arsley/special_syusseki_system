@@ -26,4 +26,7 @@ Rails.application.routes.draw do
   resources :teachers, only: [:show]
   resources :students, only: [:show]
   resources :timecards, only: %i[index show update]
+
+  # 開発専用ルーティング
+  get 'develop/studentshow/:id', to: 'students#debug_show'
 end

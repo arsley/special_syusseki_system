@@ -1,0 +1,14 @@
+%h1
+  %center 学生画面(開発専用)
+
+%h2
+  %center #{@student.name} さん
+
+%p
+  %center 直近5日間までの出席状況です。
+%p
+  %center 確認後はログアウトを忘れずに行なってください。
+
+= render 'list_attendance', timecards: @student.timecards.last(5)
+
+%center= link_to '使えないログアウト', '#'
