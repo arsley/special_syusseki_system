@@ -6,12 +6,11 @@ class Teacher < ApplicationRecord
   VALID_COURSES = %w[1A 1B 1C 1D 2A 2B 2C 2D
                      3AD 3EE 3ME 3CS 4AD 4EE 4ME 4CS 5AD 5EE 5ME 5CS].freeze
   def course_valid?
-    unless VALID_COURSES.include?(course)
-      errors.add(:room_grade,  'is something wrong')
-      errors.add(:room_course, 'is something wrong')
-      # errors.add(:room_grade,  '担当学年に間違いがあります')
-      # errors.add(:room_course, '担当クラスに間違いがあります')
-    end
+    return if VALID_COURSES.include?(course)
+    errors.add(:room_grade,  'is something wrong')
+    errors.add(:room_course, 'is something wrong')
+    # errors.add(:room_grade,  '担当学年に間違いがあります')
+    # errors.add(:room_course, '担当クラスに間違いがあります')
   end
 
   # メールアドレスは全て小文字で保存する

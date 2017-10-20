@@ -4,6 +4,16 @@
 %h2(class="print-name-box")
   %center #{current_student.name} さん
 
+%p
+  %center 直近5日間までの出席状況です。
+%p
+  %center 確認後はログアウトを忘れずに行なってください。
+
+= render 'list_attendance', timecards: current_student.timecards.last(5)
+
+%center= link_to 'ログアウト', student_logout_path, method: :delete
+
+<<<<<<< HEAD
 .logout-button-box
   = link_to 'ログアウト', student_logout_path,class:"logout-button", method: :delete
 教員管理画面
@@ -10151,3 +10161,6 @@ Teacher1 先生
 チェック済み 5件 未チェック 3件
 打刻管理ページ
 ログアウト
+=======
+
+>>>>>>> origin/master

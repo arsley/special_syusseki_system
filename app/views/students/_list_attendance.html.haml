@@ -1,0 +1,14 @@
+%table(align="center")
+  %tr(align="center")
+    %th 打刻日時
+    %th 打刻確認状況
+
+  - timecards.each do |timecard|
+    %tr(align="center")
+      %td= timecard.created_at.to_formatted_s(:timecard)
+      %td= timecard.puts_status
+
+  - if timecards.blank?
+    %tr(align="center")
+      %td データ未登録
+      %td データ未登録

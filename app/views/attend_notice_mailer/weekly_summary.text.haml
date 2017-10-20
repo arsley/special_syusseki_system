@@ -1,0 +1,14 @@
+タイムカード週次報告
+(このメールはテキスト形式のため表示が崩れることがあります、ご了承ください)
+=======================================
+#{@teacher.name}先生 担当クラス : #{@teacher.course}
+氏名 | 月曜日 | 火曜日 | 水曜日 | 木曜日 | 金曜日
+
+- @students.each do |student|
+  - student_template = student.name
+  - weekly_timecards = student.timecards.last(5)
+  - 5.times do |i|
+    - student_template += ' | '
+    - day_timecard = weekly_timecards.find { |t| t.created_at.wday == (i + 1) }
+    - student_template += day_timecard ? day_timecard.puts_status : '未登録'
+  = student_template

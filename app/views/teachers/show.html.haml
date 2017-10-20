@@ -5,6 +5,7 @@
   %center #{current_teacher.name} 先生
 
 %center= link_to '打刻管理ページ', timecards_path
+%center= link_to '学生アカウント作成', students_new_path
 
 %h4
   %center= link_to 'ログアウト', teacher_logout_path,class:"logout_button" ,method: :delete

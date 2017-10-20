@@ -4,6 +4,10 @@ class StudentsController < ApplicationController
   def show
   end
 
+  def debug_show
+    @student = Student.find(params[:id])
+  end
+
   def new
     @student = Student.new
   end

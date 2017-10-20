@@ -7,10 +7,10 @@
       -# %div(class="TeachersButtonBox")
         %a(class="TeachersButton"){:href =>"/teacher/login"}teacher
       .teacher-button-box
-        = link_to 'teacher', teacher_login_path, class: "teacher-button"
+        = link_to 'teacher', teacher_login_path, class: "teacher-button", target: '_blank'
 
     %td
       -#%div(class="StudentsButtonBox")
         %a(class="StudentsButton"){:href =>"ここにpath"} student
       .student-button-box
-        = link_to 'student',student_login_path,class: "student-button"
+        = link_to 'student',student_login_path,class: "student-button", target: '_blank'
