@@ -21,3 +21,5 @@
       %td= f.password_field :password_confirmation
 
   %center= f.submit '作成'
+
+= link_to '<<教員トップページへ', teacher_path(current_teacher.id)

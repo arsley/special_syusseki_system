@@ -15,6 +15,6 @@ class TeacherSessionsController < ApplicationController
 
   def destroy
     logout_teacher
-    redirect_to root_url
+    redirect_to teacher_login_url
   end
 end
