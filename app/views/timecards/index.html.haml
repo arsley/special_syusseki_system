@@ -1,8 +1,8 @@
-%h1
-  %center 打刻管理ページ(一覧)
+.page-name-printer-space
+  %center.page-name-printer 打刻管理ページ(一覧)
 
-%h2
-  %center= "#{current_teacher.course} 担当学生一覧"
+.teachers-name-printer-space
+  %center="#{current_teacher.course} 担当学生一覧"
 
 = render 'list_students', students: @students
 

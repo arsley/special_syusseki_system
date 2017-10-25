@@ -10,14 +10,7 @@
         = f.label :name, '氏名',class:"text"
         = f.text_field :name,class:"type-box"
 
-      .grade-box
-        = f.label :grade, '学年',class:"text"
-        = f.select :grade, { '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5' },class:"chose-gradde"
-
-      .class-box
-        = f.label :department, '学科',class:"text"
-        = f.select :department, { 'デザイン学科' => 'AD', '電気工学科' => 'EE', '機械電子工学科' => 'ME', '情報工学科' => 'CS' }, class:"chose-class"
-
+      
       .number-box
         = f.label :education_number, '学籍番号',class:"text"
 

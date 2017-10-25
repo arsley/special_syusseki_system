@@ -10,12 +10,12 @@
   %center 確認後はログアウトを忘れずに行なってください。
 
 = render 'list_attendance', timecards: current_student.timecards.last(5)
+<<<<<<< HEAD
 
 %center= link_to 'ログアウト', student_logout_path, method: :delete
 
 <<<<<<< HEAD
-.logout-button-box
-  = link_to 'ログアウト', student_logout_path,class:"logout-button", method: :delete
+
 教員管理画面
 Teacher1 先生
 アカウント登録 ルール設定 実施日設定
@@ -10164,3 +10164,8 @@ Teacher1 先生
 =======
 
 >>>>>>> origin/master
+=======
+
+.logout-button-box
+  = link_to 'ログアウト', student_logout_path,class:"logout-button", method: :delete
+>>>>>>> origin/look
