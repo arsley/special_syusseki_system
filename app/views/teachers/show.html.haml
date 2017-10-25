@@ -1,10 +1,11 @@
 %h1(class="title")
   %center 教員管理画面
 
-%h2(class="ptint-teacher-name")
-  %center #{current_teacher.name} 先生
+.print-teacher-name-space
+  %center.print-teacher-name Welcome #{current_teacher.name} !!
 
-%center= link_to '打刻管理ページ', timecards_path
+.jump-button-space
+  %center= link_to '打刻管理ページ', timecards_path,class:"jump-button"
 
-%h4
-  %center= link_to 'ログアウト', teacher_logout_path,class:"logout_button" ,method: :delete
+.logout-button-space
+  %center= link_to 'ログアウト', teacher_logout_path,class:"logout-button" ,method: :delete
