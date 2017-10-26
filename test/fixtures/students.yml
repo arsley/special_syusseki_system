@@ -1,4 +1,4 @@
 student1:
   name: Student1
   education_number: 13547
-  password_digest: <%= Student.digest('teacher') %>
+  password_digest: <%= Student.digest('student') %>
