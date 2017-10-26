@@ -35,10 +35,4 @@ class TeachersController < ApplicationController
       .permit(:name, :email, :password, :password_confirmation,
               :room_grade, :room_course)
   end
-
-  def logged_in_teacher
-    return if teacher_logged_in?
-    flash[:danger] = '教員ログインが必要なページです'
-    redirect_to teacher_login_url
-  end
 end

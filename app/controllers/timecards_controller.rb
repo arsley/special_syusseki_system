@@ -27,10 +27,4 @@ class TimecardsController < ApplicationController
   def timecard_update_params
     params.permit(:status)[:status]
   end
-
-  def logged_in_teacher
-    return if teacher_logged_in?
-    flash[:danger] = '教員ログインが必要なページです'
-    redirect_to teacher_login_url
-  end
 end
