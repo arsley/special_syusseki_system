@@ -1,21 +1,21 @@
 %table(align="center")
   %tr(align="center")
-    %th 氏名
-    %th 最新打刻
-    %th 打刻確認状況
-    %th 連続出席日数
+    %th(class="_list_dtudents-name") 氏名
+    %th(class="_list_dtudents-latest") 最新打刻
+    %th(class="_list_dtudents-check") 打刻確認状況
+    %th(class="_list_dtudents-continuity") 連続出席日数
 
   - students.each do |student|
     - timecard = student.timecards.last
     - if timecard
       %tr(align="center")
-        %td= link_to student.name, "timecards/student/#{student.id}"
+        %td(class="_list_dtudents-name-data")= link_to student.name, "timecards/student/#{student.id}"
         %td= timecard.created_at.to_formatted_s(:timecard)
-        %td= link_to timecard.puts_status, timecard_path(timecard.id)
+        %td= link_to timecard.puts_status, timecard_path(timecard.id),class:"_list_dtudents-check-data"
         %td= "#{student.counts_attendance} / 12"
     - else
       %tr(align="center")
-        %td= link_to student.name, "timecards/student/#{student.id}"
+        %td= link_to student.name, "timecards/student/#{student.id}",class:"_list_dtudents-name-data"
         %td データ未登録
         %td データ未登録
         %td データ未登録
