@@ -3,15 +3,15 @@
 
 = form_for(@student, url: students_new_path) do |f|
   .new-main
+    .new-error_messages
+      = render 'error_messages',class:"errorーmessages"
     .typa-form
-      .new-error_messages
-        = render 'error_messages'
-      .new-name-box
+      .new-name-space
         = f.label :name, '氏名',class:"new-text"
         = f.text_field :name,class:"new-type-box"
 
 
-      .new-number-box
+      .new-number-space
         = f.label :education_number, '学籍番号',class:"new-text"
         = f.text_field :education_number,class:"new-type-box"
 

@@ -20,10 +20,10 @@ h1{
 }
 .alert-danger{
   color:red;
-  position: absolute;
-  margin-top: 25vh;
+  //position: absolute;
+  //margin-top: 25vh;
   width: 100%;
-  text-align:center;
+  text-align:left;
   display: block;
 }
 .email-form{
@@ -89,6 +89,7 @@ h1{
   weight:25vh;
   height: 10vh;
   margin:auto;
+  color: #fd9540;
   font-size: 20px;
 }
 .pass-box{
