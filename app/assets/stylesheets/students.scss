@@ -74,6 +74,24 @@ error-messages-new{
   height:20vh;
   margin: auto;
 }
+.new-back-to-top{
+  display: block;
+  position: absolute;
+
+  bottom: 10px;
+  left: 7px;
+  font-size: 20px;
+  height:50px;
+  width: 240px;
+  color:#fd9535;
+  background-color: #fff;
+  border: solid 1px #fd9535;
+  text-decoration: none;
+  &:hover{
+    background-color: #fd9535;
+    color:#fff;
+  }
+}
 
 /*new.html.haml end*/
 
