@@ -13,14 +13,15 @@ body{
   margin: auto;
 }
 .new-title-space{
-  width: 100vh;
+  width: 100%;
   height:10vh;
   display: block;
 }
 .new-title{
   text-align: center;
   margin: auto;
-  width: 20vh;
+  width: 60vh;
+  font-size:40px;
 }
 .new-number-box{
   display: block;
@@ -40,7 +41,7 @@ body{
   height:30px;
   margin: 0;
 }
-error-messages-new{
+.error-messages-new{
   display: block;
   width:60vh;
   height:30px;
@@ -48,7 +49,7 @@ error-messages-new{
 }
 .new-main{
   display: block;
-  width:60vh;
+  width:62vh;
   height:70vh;
   margin: auto;
   font-size:20px;
@@ -70,9 +71,27 @@ error-messages-new{
 }
 .new-create-button-space{
   display:block;
-  width: 100vh;
+  width: 100%;
   height:20vh;
   margin: auto;
+}
+.new-back-to-top{
+  display: block;
+  position: absolute;
+
+  bottom: 10px;
+  left: 7px;
+  font-size: 20px;
+  height:50px;
+  width: 240px;
+  color:#fd9535;
+  background-color: #fff;
+  border: solid 1px #fd9535;
+  text-decoration: none;
+  &:hover{
+    background-color: #fd9535;
+    color:#fff;
+  }
 }
 
 /*new.html.haml end*/
