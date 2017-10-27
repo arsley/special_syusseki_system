@@ -1,5 +1,5 @@
 %h1(class="new-title-space")
-  %p(class="title") 学生アカウント作成
+  %p(class="new-title") 学生アカウント作成
 
 = form_for(@student, url: students_new_path) do |f|
   .new-main
@@ -11,17 +11,17 @@
         = f.text_field :name,class:"new-type-box"
 
 
-      .number-box
+      .new-number-box
         = f.label :education_number, '学籍番号',class:"new-text"
-        = f.text_field :education_number,class:"new-type-box"
+        = f.text_field :education_number,class:"new-type"
 
-      .pass-box
-        = f.label :password, 'パスワード',class:"text"
-        = f.password_field :password,class:"type-box-pass"
+      .new-pass-space
+        = f.label :password, 'パスワード',class:"new-text"
+        = f.password_field :password,class:"new-type-box-pass"
 
-      .pass-box
-        = f.label :password_confirmation, 'パスワード確認',class:"text"
-        = f.password_field :password_confirmation,class:"type-box-pass"
+      .new-pass-space
+        = f.label :password_confirmation, 'パスワード確認',class:"new-text"
+        = f.password_field :password_confirmation,class:"new-type-box-pass"
 
     .new-create-button-space
       = f.submit '作成',class:"new-create-button"
