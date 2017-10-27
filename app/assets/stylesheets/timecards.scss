@@ -4,22 +4,49 @@
 
 
 //Start index.html.haml
-.page-name-printer-space{
+.index-page-name-space{
   display: block;
-  width: 300px;
+  width: 100%;
   height: 50px;
 
 }
-.page-name-printer{
+.index-page-name{
   font-size: 40px;
   color: #fd9535;
+}
+
+.index-teachers-name-space{
+  display: block;
+  width: 300px;
+  height: 80px;
+  margin: auto;
+
+}
+.index-teachers-name{
+  position:absolute;
+  top:90px;
+}
+.index-student-name{
+  text-decoration: none;
+  
 
 
 }
-.teachers-name-printer-space{
+.index-back-to-top{
   display: block;
-  width: 300px;
-  height: 50px;
+  position: absolute;
 
-
+  bottom: 10px;
+  left: 7px;
+  font-size: 20px;
+  height:50px;
+  width: 240px;
+  color:#fd9535;
+  background-color: #fff;
+  border: solid 1px #fd9535;
+  text-decoration: none;
+  &:hover{
+    background-color: #fd9535;
+    color:#fff;
+  }
 }

@@ -43,8 +43,8 @@
 }
 
 .jump-button{
-  display: block;
   color:#fd9535;
+  display: block;
   text-decoration:none;
    background-color:#fff;
    border: solid 1px #fd9535;
@@ -55,6 +55,13 @@
     color:#fff;
     background-color:#fd9535;
   }
+}
+.jump-button-space{
+  display: block;
+  height: 60px;
+  width: 100%;
+  margin:0;
+
 }
 .logout-button{
   display: block;

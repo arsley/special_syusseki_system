@@ -1,53 +1,40 @@
 // Place all the styles related to the students controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-/*new.html.haml start*/
 body{
   width: 100vh;
   height: 100vh;
 }
-.name-box{
+/*new.html.haml start*/
+.new-name-box{
   display:block;
   width: 60vh;
   height:30px;
   margin: auto;
 }
-.title-box{
+.new-title-space{
   width: 100vh;
   height:10vh;
   display: block;
 }
-.title{
+.new-title{
   text-align: center;
   margin: auto;
   width: 20vh;
 }
-.grade-box{
+.new-number-box{
   display: block;
   width: 60vh;
   height:30px;
   margin: auto;
 }
-.class-box{
-  display: block;
-  width: 60vh;
-  height:30px;
-  margin: auto;
-}
-.number-box{
-  display: block;
-  width: 60vh;
-  height:30px;
-  margin: auto;
-}
-.pass-box{
+.new-pass-box{
   display: block;
   width:60vh;
   height:30px;
   margin: 0;
 }
-.pass-box{
+.new-pass-space{
   display: block;
   width:60vh;
   height:30px;
@@ -59,33 +46,35 @@ error-messages-new{
   height:30px;
   margin:auto;
 }
-.main{
+.new-main{
   display: block;
   width:60vh;
   height:70vh;
   margin: auto;
   font-size:20px;
 }
-.text{
+.new-text{
   display: inline-block;
   width:30vh;
   height: 30px;
   text-align: center;
 }
-.type-box{
+.new-type{
   display: inline-block;
   width: 30vh;
   height: 30px
 }
-.create-button{
+.new-create-button{
   width: 30vh;
   margin: auto;
 }
-.create-button-box{
+.new-create-button-space{
+  display:block;
   width: 100vh;
   height:20vh;
   margin: auto;
 }
+
 /*new.html.haml end*/
 
 /*show.html.haml start*/

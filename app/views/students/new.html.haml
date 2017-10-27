@@ -1,18 +1,19 @@
-%h1(class="title-box")
+%h1(class="new-title-space")
   %p(class="title") 学生アカウント作成
 
 = form_for(@student, url: students_new_path) do |f|
-  .main-student-new
+  .new-main
     .typa-form
-      .error_messages-new
+      .new-error_messages
         = render 'error_messages'
-      .name-box
-        = f.label :name, '氏名',class:"text"
-        = f.text_field :name,class:"type-box"
+      .new-name-box
+        = f.label :name, '氏名',class:"new-text"
+        = f.text_field :name,class:"new-type-box"
 
-      
+
       .number-box
-        = f.label :education_number, '学籍番号',class:"text"
+        = f.label :education_number, '学籍番号',class:"new-text"
+        = f.text_field :education_number,class:"new-type-box"
 
       .pass-box
         = f.label :password, 'パスワード',class:"text"
@@ -22,7 +23,7 @@
         = f.label :password_confirmation, 'パスワード確認',class:"text"
         = f.password_field :password_confirmation,class:"type-box-pass"
 
-    .create-button-box
-      = f.submit '作成',class:"create-button"
+    .new-create-button-space
+      = f.submit '作成',class:"new-create-button"
 
-= link_to '<<教員トップページへ', teacher_path(current_teacher.id)
+= link_to '<<教員トップページへ', teacher_path(current_teacher.id),class:"new-back-to-top"

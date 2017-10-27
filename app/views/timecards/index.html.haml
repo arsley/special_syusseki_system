@@ -1,9 +1,10 @@
-.page-name-printer-space
-  %center.page-name-printer 打刻管理ページ(一覧)
+.index-page-name-space
+  %center.index-page-name 打刻管理ページ(一覧)
 
-.teachers-name-printer-space
-  %center="#{current_teacher.course} 担当学生一覧"
+.make-space
+.index-teachers-name-space
+  %center.index-teachers-name="#{current_teacher.course} 担当学生一覧"
 
-= render 'list_students', students: @students
+= render 'list_students', students: @students,class:"index-student-name"
 
-= link_to '<<教員画面トップへ', teacher_path(current_teacher)
+= link_to '教員画面トップへ', teacher_path(current_teacher),class:"index-back-to-top"
