@@ -2,13 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.email-form{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pass-form{
+     width: 500px;
+    margin: 0 auto;
+    text-align: center;
+
+}
 
 .new-login-button{
    display: inline-block;
   text-decoration: none;
   background: #87befd;
   color: #FFF;
-  width: 120px;
+  width: 200px;
   height: 120px;
   line-height: 120px;
   border-radius: 50%;
@@ -16,8 +28,8 @@
   vertical-align: middle;
   overflow: hidden;
   transition: .4s;
-&:hover{
-    background: #668ad8;
+  &:hover{
+      background: #668ad8;
 
-}
+  }
 }

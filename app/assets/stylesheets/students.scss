@@ -13,14 +13,15 @@ body{
   margin: auto;
 }
 .new-title-space{
-  width: 100vh;
+  width: 100%;
   height:10vh;
   display: block;
 }
 .new-title{
   text-align: center;
   margin: auto;
-  width: 20vh;
+  width: 60vh;
+  font-size:40px;
 }
 .new-number-box{
   display: block;
@@ -40,7 +41,7 @@ body{
   height:30px;
   margin: 0;
 }
-error-messages-new{
+.error-messages-new{
   display: block;
   width:60vh;
   height:30px;
@@ -48,7 +49,7 @@ error-messages-new{
 }
 .new-main{
   display: block;
-  width:60vh;
+  width:62vh;
   height:70vh;
   margin: auto;
   font-size:20px;
@@ -70,7 +71,7 @@ error-messages-new{
 }
 .new-create-button-space{
   display:block;
-  width: 100vh;
+  width: 100%;
   height:20vh;
   margin: auto;
 }

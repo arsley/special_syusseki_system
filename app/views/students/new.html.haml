@@ -1,4 +1,4 @@
-%h1(class="new-title-space")
+.new-title-space
   %p(class="new-title") 学生アカウント作成
 
 = form_for(@student, url: students_new_path) do |f|
@@ -13,7 +13,7 @@
 
       .new-number-box
         = f.label :education_number, '学籍番号',class:"new-text"
-        = f.text_field :education_number,class:"new-type"
+        = f.text_field :education_number,class:"new-type-box"
 
       .new-pass-space
         = f.label :password, 'パスワード',class:"new-text"
