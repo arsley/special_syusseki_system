@@ -10,8 +10,8 @@ student_baseparams = {
 }
 
 Student.create(student_baseparams)
-Student.create(student_baseparams.merge(name: 'Student2', education_number: 13333))
-Student.create(student_baseparams.merge(name: 'Student3', education_number: 13000))
+Student.create(student_baseparams.merge(name: 'Student2', education_number: 13_333))
+Student.create(student_baseparams.merge(name: 'Student3', education_number: 13_000))
 
 # 打刻サンプルデータ
 basetime = Time.zone.local(2017, 5, 1, 8, 45, 0)

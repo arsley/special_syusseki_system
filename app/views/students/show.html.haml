@@ -1,13 +1,12 @@
-%h1(class="title-box")
+.new-title-space
   %center(class="title") 学生画面
 
 %h2(class="print-name-box")
   %center #{current_student.name} さん
 
-%p
-  %center 直近5日間までの出席状況です。
-%p
-  %center 確認後はログアウトを忘れずに行なってください。
+.main-text
+  直近5日間までの出席状況です。
+  確認後はログアウトを忘れずに行なってください。
 
 = render 'list_attendance', timecards: current_student.timecards.last(5)
 
