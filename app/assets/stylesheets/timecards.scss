@@ -69,6 +69,10 @@
   }
 }
   //start _list_dtudents
+._list_dtudents-check-data{
+  text-decoration: none;
+  color:#fd9535;
+}
 ._list_dtudents-name-data{
   text-decoration: none;
   color:#fd9535;
@@ -77,6 +81,10 @@
 //end index.html.haml
 
 //start student_index.html.haml
+.student_index-student-name{
+  color:#fd9535;
+  font-size: 40px;
+}
 .student_index-back-to-top{
   display: block;
   position: absolute;
@@ -97,3 +105,56 @@
   }
 }
 //end student_index.html.haml
+//show.html.haml
+  //start _check_timecard.html.haml
+._check_timecard-main{
+  display: block;
+  height:700px;
+  width:800px;
+  margin:auto;
+
+}
+._check_timecard-title-space{
+  width: 100%;
+  height: 10vh;
+}
+._check_timecard-choice{
+  display: inline-block;
+
+  bottom: 10px;
+  font-size: 20px;
+  height:50px;
+  width: 240px;
+  color:#fd9535;
+  text-align: center;
+  background-color: #fff;
+  border: solid 1px #fd9535;
+  text-decoration: none;
+  &:hover{
+    background-color: #fd9535;
+    color:#fff;
+  }
+}
+
+  //end _check_timecard.html.haml
+
+.show-back-to-student-data{
+  display: block;
+  position: absolute;
+
+  bottom: 10px;
+  left: 7px;
+  font-size: 20px;
+  height:50px;
+  width: 240px;
+  color:#fd9535;
+  text-align: center;
+  background-color: #fff;
+  border: solid 1px #fd9535;
+  text-decoration: none;
+  &:hover{
+    background-color: #fd9535;
+    color:#fff;
+  }
+}
+//end show.html.haml

@@ -1,3 +1,3 @@
 = render 'check_timecard'
 
-%td= link_to "<<#{@student.name}の打刻一覧へ戻る", "student/#{@student.id}"
+%td= link_to "#{@student.name}の打刻一覧へ", "student/#{@student.id}",class:"show-back-to-student-data"

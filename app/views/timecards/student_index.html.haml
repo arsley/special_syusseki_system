@@ -1,8 +1,8 @@
 %h1
-  %center 打刻管理ページ(個人)
+  //%center 打刻管理ページ(個人)
 
 %h2
-  %center= "#{@student.name} さんの打刻一覧"
+  %center(class="student_index-student-name")= "#{@student.name}"
 
 = render 'list_timecards', timecards: @timecards
 

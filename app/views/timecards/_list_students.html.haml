@@ -9,7 +9,7 @@
     - timecard = student.timecards.last
     - if timecard
       %tr(align="center")
-        %td(class="_list_dtudents-name-data")= link_to student.name, "timecards/student/#{student.id}"
+        %td= link_to student.name, "timecards/student/#{student.id}",class:"_list_dtudents-name-data"
         %td= timecard.created_at.to_formatted_s(:timecard)
         %td= link_to timecard.puts_status, timecard_path(timecard.id),class:"_list_dtudents-check-data"
         %td= "#{student.counts_attendance} / 12"
