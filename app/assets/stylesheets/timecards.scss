@@ -4,10 +4,10 @@
 
 
 //Start index.html.haml
-.page-name-printer-space{
+.page-name-space{
   display: block;
   width: 300px;
-  height: 50px;
+  height: 10vh;
 
 }
 .index-page-name{
@@ -15,39 +15,17 @@
   color: #fd9535;
 }
 
-.index-teachers-name-space{
-  display: block;
-  width: 300px;
-  height: 80px;
-  margin: auto;
-
-}
-.index-teachers-name{
-  position:absolute;
-  top:90px;
-}
 .index-student-name{
   text-decoration: none;
 
-
-
-}
-.index-back-to-top{
-  display: block;
-  position: absolute;
-
-}
-.index-teachers-name{
-  position:absolute;
-  top:90px;
-  width: 300px;
-  text-align: center;
 }
 .index-student-name{
   text-decoration: none;
-
-
-
+}
+.index-make-space{
+  display: block;
+  height: 40px;
+  width: 100%;
 }
 .index-back-to-top{
   display: block;
@@ -85,6 +63,26 @@
   color:#fd9535;
   font-size: 40px;
 }
+.student_index-make-engraving{
+  display: block;
+  font-size: 20px;
+  height:50px;
+  width: 240px;
+  color:#fd9535;
+  text-align: center;
+  background-color: #fff;
+  border: solid 1px #fd9535;
+  text-decoration: none;
+  &:hover{
+    background-color: #fd9535;
+    color:#fff;
+  }
+}
+.student_index-list-space{
+  display: block;
+  width: 100%;
+  height: 420px;
+}
 .student_index-back-to-top{
   display: block;
   position: absolute;
@@ -104,6 +102,22 @@
     color:#fff;
   }
 }
+  //start _list_timecards.html.haml
+._list_timecards-state{
+  text-decoration: none;
+  color:#fd9535;
+  display: inline-block;
+  width: 134px;
+  margin:auto;
+}
+._list_timecards-list-size{
+  display: inline-block;
+  width: 134px;
+  margin:auto;
+}
+
+  //end _list_timecards.html.haml
+
 //end student_index.html.haml
 //show.html.haml
   //start _check_timecard.html.haml
@@ -118,10 +132,18 @@
   width: 100%;
   height: 10vh;
 }
+._check_timecard-picture-title{
+  font-size: 40px;
+  color:#fd9535;
+}
+._check_timecard-engraving-space{
+}
+._check_timecard-space{
+  display:block;
+  height:100px;
+}
 ._check_timecard-choice{
   display: inline-block;
-
-  bottom: 10px;
   font-size: 20px;
   height:50px;
   width: 240px;
@@ -135,7 +157,6 @@
     color:#fff;
   }
 }
-
   //end _check_timecard.html.haml
 
 .show-back-to-student-data{
@@ -158,3 +179,34 @@
   }
 }
 //end show.html.haml
+
+//start new.html.haml
+.new-title-space{
+  display: block;
+  width: 100%;
+  height:10vh;
+}
+.new-title{
+  font-size: 40px;
+  color:#fd9535;
+}
+.new-back-to-students{
+  display: block;
+  position: absolute;
+
+  bottom: 10px;
+  left: 7px;
+  font-size: 20px;
+  height:50px;
+  width: 240px;
+  color:#fd9535;
+  text-align: center;
+  background-color: #fff;
+  border: solid 1px #fd9535;
+  text-decoration: none;
+  &:hover{
+    background-color: #fd9535;
+    color:#fff;
+  }
+}
+//end new.html.haml

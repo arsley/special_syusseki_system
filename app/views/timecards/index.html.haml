@@ -1,9 +1,8 @@
 .index-page-name-space
-  %center.index-page-name 打刻管理ページ(一覧)
+  //%center.index-page-name 打刻管理ページ(一覧)
+  %center.index-page-name="#{current_teacher.course} 担当学生一覧"
+.index-make-space
 
-.make-space
-.index-teachers-name-space
-  %center.index-teachers-name="#{current_teacher.course} 担当学生一覧"
 
 = render 'list_students', students: @students,class:"index-student-name"
 

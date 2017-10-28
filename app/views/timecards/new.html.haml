@@ -1,8 +1,8 @@
-%h1
-  %center 打刻作成ページ
+.new-title-space
+  %center(class = "new-title") 打刻作成ページ
 
 = form_for(:timecard, url: '/timecards') do |f|
-  %table(align="center")
+  %table()
     %tr
       %td 対象学生
       %td= @student.name
@@ -23,4 +23,4 @@
 
   %center= f.submit '作成', data: { confirm: '打刻作成をします' }
 
-= link_to "<<#{@student.name}の打刻一覧へ戻る", timecard_show_path(@student.id)
+= link_to "#{@student.name}の打刻一覧", timecard_show_path(@student.id),class:"new-back-to-students"

@@ -4,8 +4,9 @@
 %h2
   %center(class="student_index-student-name")= "#{@student.name}"
 
-= render 'list_timecards', timecards: @timecards
+.student_index-list-space
+  = render 'list_timecards', timecards: @timecards
 
-%center= link_to '打刻作成', timecard_create_path(@student.id)
+%center= link_to '打刻作成', timecard_create_path(@student.id),class:"student_index-make-engraving"
 
 = link_to '打刻管理ページ(一覧)へ', timecards_path,class:"student_index-back-to-top"
