@@ -20,12 +20,12 @@ Rails.application.routes.draw do
   delete 'student/logout', to: 'student_sessions#destroy'
 
   # タイムカード関連のルーティング
-  get 'timecards/student/:id', to: 'timecards#student_index'
+  get 'timecards/student/:id/new', to: 'timecards#new',           as: 'timecard_create'
 
   # リソースのルーティング
   resources :teachers, only: [:show]
   resources :students, only: [:show]
-  resources :timecards, only: %i[index show update]
+  resources :timecards, only: %i[create index show update]
 
   # 開発専用ルーティング
   get 'develop/studentshow/:id', to: 'students#debug_show'

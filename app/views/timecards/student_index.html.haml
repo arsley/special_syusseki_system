@@ -6,4 +6,6 @@
 
 = render 'list_timecards', timecards: @timecards
 
+%center= link_to '打刻作成', timecard_create_path(@student.id)
+
 = link_to '<<打刻管理ページ(一覧)へ', timecards_path

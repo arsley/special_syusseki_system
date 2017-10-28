@@ -9,4 +9,15 @@ module TimecardsHelper
       content_tag(:img, src: snapshot)
     end
   end
+
+  # 現在の週を選択候補として提示させる(timecards/new.html.haml)
+  def select_from_week
+    day = Time.zone.now.beginning_of_week
+    weekdays = {}
+    6.times do
+      weekdays[day.to_formatted_s(:make_timecard)] = day.to_i
+      day += 1.day
+    end
+    weekdays
+  end
 end
