@@ -6,7 +6,7 @@ module TimecardsHelper
     if @timecard.snapshot == 'noimage'
       content_tag(:p, '画像はありません(手動作成した打刻です)')
     else
-      content_tag(:img, src: snapshot)
+      image_tag(snapshot, alt: '打刻画像')
     end
   end
 
