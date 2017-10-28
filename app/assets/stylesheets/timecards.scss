@@ -40,6 +40,8 @@
 .index-teachers-name{
   position:absolute;
   top:90px;
+  width: 300px;
+  text-align: center;
 }
 .index-student-name{
   text-decoration: none;
@@ -70,7 +72,6 @@
 ._list_dtudents-name-data{
   text-decoration: none;
   color:#fd9535;
-
 }
   //end _list_dtudents
 //end index.html.haml
