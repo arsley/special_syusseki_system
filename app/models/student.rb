@@ -24,15 +24,15 @@ class Student < ApplicationRecord
 
   # 連続出席日数をカウントする
   #
-  # #status == 'pass' もしくは 'unchecked' を出席扱い (+1)
+  # #status == 'pass' を出席扱い (+1)
   # #status == 'fail' は欠席扱い (become = 0)
-  # #status == 'through' は公用欠席関係 (据え置き)
+  # #status == 'through' もしくは 'unchecked' は公用欠席関係 (据え置き)
   def counts_attendance
     attend_lists = timecards.order('created_at DESC')
     attend_count = 0
     attend_lists.each do |attend|
       break if attend_count == 12 || attend.status == 'fail'
-      next if attend.status == 'through'
+      next if attend.status == 'through' || attend.status == 'unchecked'
       attend_count += 1
     end
     attend_count

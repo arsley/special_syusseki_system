@@ -9,13 +9,13 @@
     - timecard = student.timecards.last
     - if timecard
       %tr(align="center")
-        %td= link_to student.name, "timecards/student/#{student.id}",class:"_list_dtudents-name-data"
+        %td= link_to student.name, timecard_show_path(student.id),class:"_list_dtudents-name-data"
         %td= timecard.created_at.to_formatted_s(:timecard)
         %td= link_to timecard.puts_status, timecard_path(timecard.id),class:"_list_dtudents-check-data"
         %td= "#{student.counts_attendance} / 12"
     - else
       %tr(align="center")
-        %td= link_to student.name, "timecards/student/#{student.id}",class:"_list_dtudents-name-data"
+        %td= link_to student.name, timecard_show_path(student.id),class:"_list_dtudents-name-data"
         %td データ未登録
         %td データ未登録
         %td データ未登録

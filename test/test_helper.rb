@@ -12,4 +12,8 @@ class ActiveSupport::TestCase
   def teacher_logged_in?
     !session[:teacher_id].nil?
   end
+
+  def student_logged_in?
+    !session[:student_id].nil?
+  end
 end
