@@ -25,6 +25,10 @@ gem 'bcrypt'
 # Use Haml template engine
 gem 'haml-rails'
 
+# Use wicked_pdf as PDF generator
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
+
 group :development, :test do
   # Call 'binding.pry' to debug anywhere
   gem 'pry-byebug'
