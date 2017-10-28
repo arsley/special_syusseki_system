@@ -1,29 +1,25 @@
-%h1
-  %center 打刻確認
+._check_timecard-title-space
+  //%p(class = "_check_timecard-title") 打刻確認
+._check_timecard-main
+  ._check_timecard-picture-title-space
+    %center(class="_check_timecard-picture-title") 顔写真
 
-%h2
-  %center 顔写真
+  %center
+    = show_snapshot(@timecard.snapshot)
 
-%center
-  = show_snapshot(@timecard.snapshot)
+  %h2
+    %center 打刻詳細
 
-%h2
-  %center 打刻詳細
+  ._check_timecard-engraving-space
+    %table(align="center")
+      %tr(align="center")
+        %td 打刻時間
+        %td= @timecard.created_at.to_formatted_s(:timecard)
 
-%table(align="center")
-  %tr(align="center")
-    %td 打刻時間
-    %td= @timecard.created_at.to_formatted_s(:timecard)
+      %tr(align="center")
+        %td 打刻確認状況
+        %td= @timecard.puts_status
 
-  %tr(align="center")
-    %td 打刻確認状況
-    %td= @timecard.puts_status
-
-%table(align="center")
-  %tr(align="center")
-    %td
-      %button= link_to '出席', timecard_path(@timecard, status: 'pass'), method: :patch, data: { confirm: '出席扱いにします' }
-    %td
-      %button= link_to '欠席', timecard_path(@timecard, status: 'fail'), method: :patch, data: { confirm: '欠席扱いにします' }
-    %td
-      %button= link_to '公用欠席など', timecard_path(@timecard, status: 'through'), method: :patch, data: { confirm: '公用欠席扱いにします' }
+  = link_to "出席", timecard_path(@timecard, status: 'pass'), method: :patch, data: { confirm: '出席扱いにします' },class:"_check_timecard-choice"
+  = link_to '欠席', timecard_path(@timecard, status: 'fail'), method: :patch, data: { confirm: '欠席扱いにします' },class:"_check_timecard-choice"
+  = link_to '公用欠席など', timecard_path(@timecard, status: 'through'), method: :patch, data: { confirm: '公用欠席扱いにします' },class:"_check_timecard-choice"

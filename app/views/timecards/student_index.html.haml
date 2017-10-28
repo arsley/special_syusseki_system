@@ -1,10 +1,11 @@
 %h1
-  %center 打刻管理ページ(個人)
+  //%center 打刻管理ページ(個人)
 
 %h2
-  %center= "#{@student.name} さんの打刻一覧"
+  %center(class="student_index-student-name")= "#{@student.name}"
 
 = render 'list_timecards', timecards: @timecards
 
 %center= link_to '打刻作成', timecard_create_path(@student.id)
+
 = link_to '打刻管理ページ(一覧)へ', timecards_path,class:"student_index-back-to-top"
