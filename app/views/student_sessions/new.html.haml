@@ -1,15 +1,16 @@
-%h1
+.new-title
   %center 学生ログイン
 
 = form_for(:student_sessions, url: student_login_path, html: { id: 'student_login_form' }) do |f|
-  %table(align="center")
-    %tr
-      %td= f.label :education_number
-      %td= f.text_field :education_number
+  .new-main
+    .form-number
+      .new-edu-number
+        = f.label :education_number, '学籍番号',class:"new-text"
+        = f.text_field :education_number,class:"new-type-box"
 
-    %tr
-      %td= f.label :password
-      %td= f.password_field :password
+      .new-password
+        = f.label :password,'パスワード',class:"new-text"
+        = f.password_field :password,class:"new-type-box"
 
     %tr
       %td Snapshot
@@ -17,9 +18,8 @@
         #snapshot(style="width: 700px; height: 460px;")
       = f.hidden_field :snapshot
 
-  %center
   .new-login-button
-    %input{type: 'button', value: '自撮り & 打刻', id: 'btnSubmit', onClick: '_submit()'}
+    = f.submit'自撮り＆打刻する',class:"new-button"
 
 :javascript
   Webcam.attach('snapshot');

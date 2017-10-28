@@ -2,34 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.email-form{
-    width: 500px;
-    margin: 0 auto;
+.new-title{
+    height:10vh;
+    display: block;
     text-align: center;
+    margin: auto;
+    color: #fd9540;
+    width: 630px;
+    font-size:40px;
 }
 
-.pass-form{
-     width: 500px;
-    margin: 0 auto;
-    text-align: center;
+.new-edu-number{
+  margin: auto;
 
+}
+
+.new-password{
+  margin: auto;
 }
 
 .new-login-button{
-   display: inline-block;
-  text-decoration: none;
-  background: #87befd;
-  color: #FFF;
-  width: 200px;
-  height: 120px;
-  line-height: 120px;
-  border-radius: 50%;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  transition: .4s;
-  &:hover{
-      background: #668ad8;
+    margin: auto;
+    width: 500px;
+}
 
-  }
+.new-login-button{
+    width: 310px;
+    margin: auto;
+
+}
+
+.new-button{
+    display: block;
+    width: 320px;
+    height: 40px;
+    margin: auto;
 }
