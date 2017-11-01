@@ -27,6 +27,9 @@ class TeachersController < ApplicationController
     # @todo アカウント情報変更
   end
 
+  def info
+  end
+
   private
 
   def teacher_params

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # 教員関連のルーティング
   get 'teachers/new'
   post 'teachers/new', to: 'teachers#create'
+  get 'teachers/info', to: 'teachers#info', as: 'teacher_info'
 
   # 教員ログインのルーティング
   get 'teacher/login', to: 'teacher_sessions#new'
