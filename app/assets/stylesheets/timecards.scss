@@ -31,6 +31,7 @@
   display: block;
   position: absolute;
 
+  line-height: 50px;
   bottom: 10px;
   left: 7px;
   font-size: 20px;
@@ -65,18 +66,20 @@
 }
 .student_index-make-engraving{
   display: block;
+  margin:auto;
+  line-height: 50px;
   font-size: 20px;
   height:50px;
   width: 240px;
-  color:#fd9535;
-  text-align: center;
+  color:#fd9540;
   background-color: #fff;
-  border: solid 1px #fd9535;
+  border: solid 1px #fd9540;
   text-decoration: none;
   &:hover{
-    background-color: #fd9535;
+    background-color: #fd9540;
     color:#fff;
   }
+
 }
 .student_index-list-space{
   display: block;
@@ -87,6 +90,7 @@
   display: block;
   position: absolute;
 
+  line-height: 50px;
   bottom: 10px;
   left: 7px;
   font-size: 20px;
@@ -145,6 +149,7 @@
 ._check_timecard-choice{
   display: inline-block;
   font-size: 20px;
+  line-height: 50px;
   height:50px;
   width: 240px;
   color:#fd9535;
@@ -163,6 +168,7 @@
   display: block;
   position: absolute;
 
+  line-height: 50px;
   bottom: 10px;
   left: 7px;
   font-size: 20px;
@@ -195,6 +201,7 @@
   position: absolute;
 
   bottom: 10px;
+  line-height: 50px;
   left: 7px;
   font-size: 20px;
   height:50px;

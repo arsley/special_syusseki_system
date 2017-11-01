@@ -33,8 +33,17 @@
 }
 
 .new-button{
-    display: block;
-    width: 320px;
-    height: 40px;
-    margin: auto;
+  display: block;
+  position: absolute;
+  font-size: 20px;
+  height:50px;
+  width: 240px;
+  color:#fd9540;
+  background-color: #fff;
+  border: solid 1px #fd9540;
+  text-decoration: none;
+  &:hover{
+    background-color: #fd9540;
+    color:#fff;
+  }
 }
