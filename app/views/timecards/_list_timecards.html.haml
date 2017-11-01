@@ -1,14 +1,14 @@
 %table(align="center")
-  %tr(align="center")
-    %th 打刻日時
-    %th 打刻確認状況
+  %tr
+    %th(class="_list_timecards-list-size") 打刻日時
+    %th(class="_list_timecards-list-size") 打刻確認状況
 
   - timecards.each do |timecard|
-    %tr(align="center")
-      %td= timecard.created_at.to_formatted_s(:timecard)
-      %td= link_to timecard.puts_status, timecard_path(timecard.id)
+    %tr
+      %td(class="_list_timecards-list-size")= timecard.created_at.to_formatted_s(:timecard)
+      %td= link_to timecard.puts_status, timecard_path(timecard.id),class:"_list_timecards-state"
 
   - if timecards.blank?
-    %tr(align="center")
+    %tr
       %td データ未登録
       %td データ未登録
