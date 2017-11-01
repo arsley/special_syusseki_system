@@ -15,7 +15,6 @@ body{
     color: #fd9540;
     width: 630px;
     font-size:40px;
-
 }
 
 .title-box{
@@ -39,7 +38,17 @@ h1{
   display: block;
 }
 .email-form{
-  width: 60vh;
+   display:block;
+  width: 630px;
+  height:60px;
+  margin: auto;
+}
+
+.pass-form{
+   display:block;
+  width: 630px;
+  height:60px;
+  margin: auto;
 }
 
 .new_student{
@@ -47,13 +56,10 @@ h1{
   margin: 0;
 }
 .typebox{
-  display:inline-block;
-  background-color: rbga(255,255,5,0.8);
-  font-size: 20px;
-  width:28vh;
+  display: inline-block;
+  width: 308px;
   height: 40px;
-  text-align: right;
-
+  border: solid 1px #fd9540;
 }
 .typebox-pass{
   display: inline-block;
@@ -76,11 +82,9 @@ h1{
 }
 .text{
   display: inline-block;
-  font-size: 20px;
-  width:20vh;
-  height: 46px;
-  margin: auto;
-  text-align: right;
+  width:310px;
+  height: 60px;
+  text-align: center;
 }
 .main-student-news{
   display: block;
