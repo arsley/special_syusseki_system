@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   # タイムカード関連のルーティング
   get 'timecards/student/:id',     to: 'timecards#student_index', as: 'timecard_show'
   get 'timecards/student/:id/new', to: 'timecards#new',           as: 'timecard_create'
+  get 'timecards/student/:id/report.pdf', to: 'timecards#report', as: 'timecard_report'
 
   # リソースのルーティング
   resources :teachers, only: [:show]
