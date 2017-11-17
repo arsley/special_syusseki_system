@@ -1,0 +1,54 @@
+%h1
+  %center 打刻報告書
+
+%h2
+  %center 対象者 : #{@student.name}
+
+%h3
+  %center 最新12日分の打刻
+
+%table(align="center")
+  %tr(align="center")
+    %th 打刻日時
+    %th 判定
+
+  - @timecards.last(12).each do |timecard|
+    %tr(align="center")
+      %td= timecard.created_at.to_formatted_s(:timecard)
+      %td= timecard.puts_status
+
+%h3
+  %center 欠席打刻(継続失敗日)
+
+-# 欠席(失敗扱い)の打刻群を集める
+- failed_timecards = @timecards.select { |t| t.status == 'fail' }
+
+- if failed_timecards.empty?
+  %center 欠席打刻なし
+
+- else
+  %table(align="center")
+    %tr(align="center")
+      %th 打刻日時
+      %th 判定
+  - failed_timecards.each do |timecard|
+    %tr(align="center")
+      %td= timecard.created_at.to_formatted_s(:timecard)
+      %td= timecard.puts_status
+
+-# 所見欄部分
+%table(align="center")
+  %tr
+    %th(align="left") 保護者コメント欄
+    %th(align="left") 保護者印
+  %tr(style="height: 18px;")
+    %td(rowspan="5" style="border: solid 1px; width: 500px;")
+    %td(style="border-bottom: solid 1px; width: 100px;")
+  %tr(style="height: 18px;")
+    %th(align="left") 保護者署名
+  %tr(style="height: 18px;")
+    %td(style="border-bottom: solid 1px; width: 100px;")
+  %tr(style="height: 18px;")
+    %th(align="left") 教員印鑑
+  %tr(style="height: 18px;")
+    %td(style="border-bottom: solid 1px; width: 100px;")

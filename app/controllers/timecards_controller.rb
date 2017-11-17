@@ -38,6 +38,23 @@ class TimecardsController < ApplicationController
     redirect_to timecard
   end
 
+  def report
+    @student   = Student.find(params[:id])
+    @timecards = @student.timecards
+
+    # .htmlでアクセスするとデバッグ表示が可能
+    respond_to do |format|
+      format.html { redirect_to action: :report, format: :pdf, debug: true }
+      format.pdf do
+        render pdf: "打刻記録_#{@student.name}",
+               encoding:  'UTF-8',
+               layout:    'report_pdf.html',
+               page_size: 'A4',
+               show_as_html: params[:debug].present?
+      end
+    end
+  end
+
   private
 
   # created_date, created_timeからcreated_atを作るところも含める
