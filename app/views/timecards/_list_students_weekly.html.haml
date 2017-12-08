@@ -1,0 +1,14 @@
+%table(align="center")
+  %tr
+    %th 氏名
+    - select_from_week.keys.each do |wd|
+      %th= wd
+
+  - students.each do |student|
+    %tr(align="center")
+      %td= student.name
+      - day = Time.zone.now.beginning_of_week
+      - 6.times do |i|
+        - day_timecard = student.timecards.find_by(created_at: day.all_day)
+        %td= day_timecard ? link_to(day_timecard.puts_status, timecard_path(day_timecard.id)) : '×'
+        - day += 1.day

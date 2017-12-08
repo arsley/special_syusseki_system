@@ -3,7 +3,14 @@
   %center.index-page-name="#{current_teacher.course} 担当学生一覧"
 .index-make-space
 
+%h2
+  %center= "#{current_teacher.course} 担当学生 最新打刻一覧"
 
-= render 'list_students', students: @students,class:"index-student-name"
+= render 'list_students_lastest', students: @students, class:"index-student-name"
+
+%h2
+  %center 今週の出席状況
+
+= render 'list_students_weekly', students: @students
 
 = link_to '教員画面トップへ', teacher_path(current_teacher),class:"index-back-to-top"
