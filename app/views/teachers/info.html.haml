@@ -1,8 +1,11 @@
-%h1
+.new-title-space
   %center 教員ヘルプページ
 
-%p
-  %center Find me in views/teachers/info.html.haml
+.hidden-box
+  %label(for="label1") クゥリックで表示
+  %input#label1(type="checkbox")
+  .hidden-show
+    %p 消える鵜
 
 = link_to '教員トップページへ', current_teacher,class:"info-back-to-top"
 
