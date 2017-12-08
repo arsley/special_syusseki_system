@@ -2,25 +2,25 @@
   %center(class = "new-title") 打刻作成ページ
 
 = form_for(:timecard, url: '/timecards') do |f|
-  %table()
-    %tr
-      %td 対象学生
-      %td= @student.name
+  .new-type-form
+    .new-student-name-space
+      %p(class = "new-type-text") 対象学生
+      .new-type-box= @student.name
 
-    %tr
-      %td= f.label :created_date, '打刻日付'
-      %td= f.select :created_date, select_from_week, class: 'form-control'
+    .new-day-space
+      = f.label :created_date, '打刻日付',class:"new-type-text"
+      = f.select :created_date, select_from_week, class: 'form-control'
 
-    %tr
-      %td= f.label :created_time, '打刻時間'
-      %td= f.select :created_time, { '9:00' => '1', '10:50' => '2', '13:05' => '3' }, class: 'form-control'
+    .new-time-space
+      = f.label :created_time, '打刻時間',class:"new-type-text"
+      = f.select :created_time, { '9:00' => '1', '10:50' => '2', '13:05' => '3' }, class: 'form-control'
 
-    %tr
-      %td= f.label :status, '打刻確認状況'
-      %td= f.select :status, { '出席' => 'pass', '欠席' => 'fail', '公用欠席関連' => 'through' }, class: 'form-control'
+    .new-space
+      = f.label :status, '打刻確認状況',class:"new-type-text"
+      = f.select :status, { '出席' => 'pass', '欠席' => 'fail', '公用欠席関連' => 'through' }, class: 'form-control'
 
     = f.hidden_field :student_id, value: @student.id
-
-  %center= f.submit '作成', data: { confirm: '打刻作成をします' }
+  .new-create-button-space
+    = f.submit '作成', data: { confirm: '打刻作成をします' },class:"new-create-button"
 
 = link_to "#{@student.name}の打刻一覧", timecard_show_path(@student.id),class:"new-back-to-students"

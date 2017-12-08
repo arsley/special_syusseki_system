@@ -19,7 +19,7 @@
       = f.hidden_field :snapshot
 
   .new-login-button
-    = f.submit'自撮り＆打刻する',class:"new-button"
+    %input{type: 'button', value: '自撮り＆打刻する', class:'new-button', onClick: '_submit()'}
 
 :javascript
   Webcam.attach('snapshot');

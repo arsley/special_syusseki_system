@@ -1,31 +1,33 @@
-%h1
-  %center 教員アカウント作成
+.new-title-space
+  %center(class= "new-title") 教員アカウント作成
 
 = form_for(@teacher, url: teachers_new_path) do |f|
-  = render 'error_messages'
-  %table(align="center")
-    %tr
-      %td= f.label :name, '氏名'
-      %td= f.text_field :name, class: 'form-control'
+  .new-main
+    .new-print-error-space
+      = render 'error_messages',class:"new-print-error"
+    .type-form
+      .new-name-space
+        = f.label :name, '氏名',class:"new-text"
+        = f.text_field :name, class: 'form-control',class:"new-type-box"
 
-    %tr
-      %td= f.label :email, 'メールアドレス'
-      %td= f.email_field :email
+      .new-mail-space
+        = f.label :email, 'メールアドレス',class:"new-text"
+        = f.email_field :email,class:"new-type-box"
 
-    %tr
-      %td= f.label :room_grade, '担当学年'
-      %td= f.select :room_grade, { '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5' }, class: 'form-control'
+      .new-grade-space
+        = f.label :room_grade, '担当学年',class:"new-text"
+        = f.select :room_grade, { '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5' }, class: 'form-control'
 
-    %tr
-      %td= f.label :room_course, '担当クラス, 学科'
-      %td= f.select :room_course, { 'デザイン学科' => 'AD', '電気工学科' => 'EE', '機械電子工学科' => 'ME', '情報工学科' => 'CS', '混成A' => 'A', '混成B' => 'B', '混成C' => 'C', '混成D' => 'D' }, class: 'form-control'
+      .new-class-space
+        = f.label :room_course, '担当クラス, 学科',class:"new-text"
+        = f.select :room_course, { 'デザイン学科' => 'AD', '電気工学科' => 'EE', '機械電子工学科' => 'ME', '情報工学科' => 'CS', '混成A' => 'A', '混成B' => 'B', '混成C' => 'C', '混成D' => 'D' }, class: 'form-control'
 
-    %tr
-      %td= f.label :password, 'パスワード'
-      %td= f.password_field :password, class: 'form-control'
+      .new-pass-space
+        = f.label :password, 'パスワード',class:"new-text"
+        = f.password_field :password, class: 'form-control',class:"new-type-box-pass"
 
-    %tr
-      %td= f.label :password_confirmation, 'パスワード確認'
-      %td= f.password_field :password_confirmation, class: 'form-control'
-
-  %center= f.submit '作成'
+      .new-pass-space
+        = f.label :password_confirmation, 'パスワード確認',class:"new-text"
+        = f.password_field :password_confirmation,class:"new-type-box-pass"
+      .new-create-button
+        = f.submit '作成',class:"new-create-button"
