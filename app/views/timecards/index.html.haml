@@ -3,13 +3,13 @@
   %center.index-page-name="#{current_teacher.course} 担当学生一覧"
 .index-make-space
 
-  %h2
-    %center= "#{current_teacher.course} 担当学生 最新打刻一覧"
+%h2
+  %center= "#{current_teacher.course} 担当学生 最新打刻一覧"
 
-  = render 'list_students_lastest', students: @students
+= render 'list_students_lastest', students: @students, class:"index-student-name"
 
-  %h2
-    %center 今週の出席状況
+%h2
+  %center 今週の出席状況
 
 = render 'list_students_weekly', students: @students
 
