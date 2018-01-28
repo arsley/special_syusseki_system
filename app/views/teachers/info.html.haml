@@ -2,12 +2,45 @@
   %center 教員ヘルプページ
 
 .hidden-box
-  %label(for="label1") クゥリックで表示
+  %label(for="label") 教師アカウントを作成したい
+  %input#label(type="checkbox")
+  .hidden-show
+    %p 手順1. 指定のURLに接続
+    %p 手順2. 下図の「氏名」「メールアドレス」「担当学年」「担当クラス，学科」「パスワード」「パスワード確認」を入力して，「作成」をクリック
+    %img.samp{src: asset_path("teacher_account_create.png")}
+    %p 手順3. 作成したアカウントでログインされていれば登録完了
+
+.hidden-box1
+  %label(for="label1") 学生のアカウントを登録したい
   %input#label1(type="checkbox")
   .hidden-show
-    %p 消える鵜
+    %p 手順1. 教員トップページに戻り，「学生アカウント作成」をクリック
+    %p 手順2. 下図の「氏名」「学籍番号」「パスワード」「パスワード確認」を入力し，「作成」をクリック
+    %img.samp{src: asset_path("MakeAccountStudent.png")}
+    %p 手順3. トップページに戻され，画面左上に「学生アカウントが登録しました」と表示されれば登録完了
 
-= link_to '教員トップページへ', current_teacher,class:"info-back-to-top"
+.hidden-box2
+  %label(for="label2") 打刻作成するには
+  %input#label2(type="checkbox")
+  .hidden-show
+    %p 手順1. 教員トップページに戻り，「打刻管理ページ」をクリック
+    %p 手順2. 打刻を作成したい学生の氏名（黄文字）をクリック
+    %p 手順3. 「打刻作成」をクリックし，「打刻日時」「打刻時間」「打刻確認状況」を選択し，「作成」をクリック
+    %img.samp{src: asset_path("dakokumake.png")}
+    %p 手順4. 画面左上に「打刻を作成しました、正しい内容となっているか確認してください」と表示されていれば打刻完了
+
+.hidden-box3
+  %label(for="label3") 報告書作成が表示されない
+  %input#label3(type="checkbox")
+  .hidden-show
+    %p 手順1.　教員トップページに戻り，「打刻管理ページ」をクリック
+    %p 手順2.　下図の連続出席日数が12／12になっている学生がいることを確認
+    %img.samp{src: asset_path("12.12.png")}
+    %p 手順3.　報告書を作成したい学生の氏名をクリック（黄色字）
+    %img.samp{src: asset_path("houkokusyo.png")}
+    %p 手順4.　「報告書作成」をクリックすることで，報告書の画面が表示されます
+
+= link_to '教員トップページへ', current_teacher,class:"info-back-to-top-help"
 
 -# このページへのリンク例
 -# = link_to '教員ヘルプページ', teacher_info_path

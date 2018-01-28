@@ -90,6 +90,7 @@
 }
 /*show.html.haml end*/
 
+
 //Start new.html.haml
 .new-title-space{
   display: block;
@@ -189,6 +190,8 @@ select{
 }
 //End of new.html.haml
 
+//--------------------------------------------------------
+
 // Start  info.html.haml
 .info-back-to-top{
   display: block;
@@ -248,4 +251,147 @@ select{
     padding: 10px 0;
     height: auto;
     opacity: 1;
+}
+
+// hidden-box1 ------------------------
+
+.hidden-box1 {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden-box1 label {
+    padding: 15px;
+    font-weight: bold;
+    border: solid 2px black;
+    cursor :pointer;
+}
+
+/*ボタンホバー時*/
+.hidden-box1 label:hover {
+    background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.hidden-box1 input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden-box1 .hidden-show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden-box1 input:checked ~ .hidden-show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+
+// hidden-box2 ------------------------
+
+.hidden-box2 {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden-box2 label {
+    padding: 15px;
+    font-weight: bold;
+    border: solid 2px black;
+    cursor :pointer;
+}
+
+/*ボタンホバー時*/
+.hidden-box2 label:hover {
+    background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.hidden-box2 input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden-box2 .hidden-show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden-box2 input:checked ~ .hidden-show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+
+// hidden-box3 ------------------------
+
+.hidden-box3 {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden-box3 label {
+    padding: 15px;
+    font-weight: bold;
+    border: solid 2px black;
+    cursor :pointer;
+}
+
+/*ボタンホバー時*/
+.hidden-box3 label:hover {
+    background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.hidden-box3 input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden-box3 .hidden-show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden-box3 input:checked ~ .hidden-show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+
+.info-back-to-top-help{
+    display: block;
+    //position: absolute;
+    text-align: center;
+    line-height: 50px;
+    bottom: 10px;
+    left: 7px;
+    font-size: 20px;
+    height:50px;
+    width: 240px;
+    color:#fd9535;
+    background-color: #fff;
+    border: solid 1px #fd9535;
+    text-decoration: none;
+    &:hover{
+      background-color: #fd9535;
+      color:#fff;
+    }
 }

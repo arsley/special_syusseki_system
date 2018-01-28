@@ -68,7 +68,7 @@ select{
   //end _list_dtudents
 //end index.html.haml
 
-//start student_index.html.haml
+//start -inde_index.html.haml
 .student_index-student-name{
   color:#fd9535;
   font-size: 40px;
@@ -260,5 +260,38 @@ select{
     background-color: #fd9535;
     color:#fff;
   }
+}
+.facker{
+  display: block;
+    margin: auto;
+    line-height: 50px;
+    font-size: 20px;
+    height: 50px;
+    width: 240px;
+    color: #fd9540;
+    background-color: #fff;
+       text-decoration: none;
+    &:hover{
+      background-color: #fd9535;
+      color:#fff;
+  }
+}
+
+.student_index-report{
+    display: block;
+    margin: auto;
+    line-height: 50px;
+    font-size: 20px;
+    height: 50px;
+    width: 240px;
+    color: #fd9540;
+    background-color: #fff;
+    border: solid 1px #fd9540;
+    text-decoration: none;
+    &:hover{
+      background-color: #fd9535;
+      color:#fff;
+  }
+
 }
 //end new.html.haml
