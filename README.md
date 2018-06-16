@@ -1,5 +1,9 @@
 # Special Syusseki System
 
+## About
+
+- 学校の授業にてチーム製作したタイムカード(遅刻罰則指導)管理システム
+
 ## Requirement
 
 - Ruby 2.4.x
@@ -14,6 +18,7 @@
 
 - haml-rails
 - webcamjs
+- wicked_pdf
 
 ## Usage
 
@@ -30,6 +35,3 @@ $ bundle exec rails db:migrate
 $ bundle exec rails s
 ```
 
-## Attention
-
-Work in progress.
